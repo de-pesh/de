@@ -29,10 +29,24 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+
+
+    width: 100%;
+    top:0;
+    left: 0;
+    position: fixed;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 50px;
+    background-color: rgba(82, 82, 82, 0.4); 
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    z-index: 9999; 
 }
 
 .logo{
-    width: 100px;
+    width: 50px;
 }
 
 nav ul li{
@@ -282,10 +296,12 @@ nav ul li a:hover::after{
 
 /* ------------contact----------------- */
 .contact-left{
-    flex-basis: 35%;
+    /* margin-top: 30px; */
+    flex-basis: 45%;
 }
 .contact-right{
-    flex-basis: 60%;
+    margin-top: 30px;
+    flex-basis: 50%;
 }
 
 .contact-left p{
@@ -319,6 +335,7 @@ nav ul li a:hover::after{
 .btn.btn2{
     display: inline-block;
     background: #ff2424;
+    font-size: large;
 }
 .btn.btn2:hover{
     background: #00000000;
@@ -326,8 +343,26 @@ nav ul li a:hover::after{
 
 .contact-right form{
     width: 100%;
-
 }
 form input, form textarea{
-    
+    width:100%;
+    border:0;
+    outline: none;
+    background: #c7c7c7;
+    padding: 15px;
+    margin: 15px 0;
+    font-size: large;
+    border-radius: 6px;
+}
+
+form btn2{
+
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    margin-top: 20px;
 }
