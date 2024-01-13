@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deepesh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="/images/logo.png" alt="de" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header_text">
+                <p>Data Analyst</p>
+                <h1>Hi, I am <span>Deepesh</span><br> From Nepal</h1>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------about------------------ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col1">
+                    <img src="images/me.png">
+                </div>
+                <div class="about-col2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of
+                         the printing and typesetting industr
+                         . Lorem Ipsum has been the industry's
+                          standard dummy text ever since the 
+                          1500s, when an unknown printer took 
+                          a galley of type and scrambled it to 
+                          make a type specimen book. It has 
+                          survived not only five centuries, 
+                          but also the leap into electronic 
+                          typesetting, remaining essentially 
+                          unchanged. It was popularised in the 
+                          1960s with the release of Letraset 
+                          sheets containing Lorem Ipsum
+                           passages, and more recently with 
+                           desktop publishing software like 
+                           Aldus PageMaker including versions 
+                           of Lorem Ipsum.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opnetab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opnetab('expeirence')">Expeirence</p>
+                        <p class="tab-links" onclick="opnetab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI UX</span><br>Design web apps</li>
+                            <li><span>web dev</span><br>Designddd</li>
+                            <li><span>UI app</span><br>Desigddd</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="expeirence">
+                        <ul>
+                            <li><span>Exp1</span><br>hehe</li>
+                            <li><span>Exp 2</span><br>jeje</li>
+                            <li><span>Exp 3</span><br>huhu</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>school</span><br>good</li>
+                            <li><span>high school</span><br>bad</li>
+                            <li><span>Univ</span><br>too bad</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------------services---------------- -->
+    <div class="services">
+        <div class="container">
+            <h1 class="subtitle">My Services</h1>
+            <div class="services-list">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opnetab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
