@@ -46,7 +46,7 @@ nav{
 }
 
 .logo{
-    width: 50px;
+    width: 70px;
 }
 
 nav ul li{
@@ -297,20 +297,22 @@ nav ul li a:hover::after{
 /* ------------contact----------------- */
 .contact-left{
     /* margin-top: 30px; */
+    margin: 30px;
     flex-basis: 45%;
 }
 .contact-right{
     margin-top: 30px;
-    flex-basis: 50%;
+    flex-basis: 45%;
 }
 
 .contact-left p{
-    margin: 30px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
-.contact-left p i{
+.contact-left i{
     color: #ff2424;
-    margin-right: 15px;
+    margin: 15px;
     font-size: 25px;
 }
 
@@ -350,8 +352,8 @@ form input, form textarea{
     outline: none;
     background: #c7c7c7;
     padding: 15px;
-    margin: 15px 0;
-    font-size: large;
+    margin: 17px 0;
+    font-size:large;
     border-radius: 6px;
 }
 
