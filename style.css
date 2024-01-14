@@ -15,8 +15,15 @@ body{
     width: 100%; 
     height: 100vh;
     background-image: url(images/big-screen.png);
+
+    background-size: fill;
+    background-position: right;
+    background-position: 100% 0%;
+    background-repeat: no-repeat;
+
+/*     
     background-size: cover; 
-    background-position: center;
+    background-position: center; */
 }
 
 .container{
@@ -367,4 +374,21 @@ form btn2{
     padding: 25px 0;
     background: #262626;
     margin-top: 20px;
+}
+
+
+/* ------------------for small screen------------- */
+@media only screen and (max-width: 600px) {
+    #header{
+        background-image: url("images/phone.png");
+        background-size: cover; 
+        background-position: center;
+    }
+    .header_text{
+        margin-top:200%;
+        font-size: 16px;
+    }
+    .header_text h1{
+        font-size: 30px;
+    }
 }
