@@ -191,7 +191,7 @@
                     
                 </div>
             </div>
-            <span id="msg">Submitted Successfully</span>
+            <span id="msg"></span>
         </div>
         <div class="copyright">
             <p>Copyright © Deepesh</p>
@@ -224,11 +224,21 @@
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxl9sCr87mDlvyqinjxD_26tTJEKn2-ImVVrL-yAAhCg-Sta_56csrptpcQ6Q_9dy35/exec'
         const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg");
       
         form.addEventListener('submit', e => {
           e.preventDefault()
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
+            .then(response => {
+                msg.innerHTML = "Submitted Successfully"
+                msg.style.backgroundColor = "green";
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                    msg.style.backgroundColor = "#ffffff00";
+                }, 5000)
+                form.reset()
+    
+            })
             .catch(error => console.error('Error!', error.message))
         })
       </script>
