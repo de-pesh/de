@@ -371,6 +371,21 @@ form input, form textarea{
     border-radius: 6px;
 }
 
+#msg{
+    color: rgb(0, 0, 0);
+    margin-top: -30px;
+    margin-left: 25%;
+    margin-right: 25%;
+    display: block;
+    text-align: center;
+    align-self: center;
+    background-color: greenyellow;
+    border-radius: 10px;
+    font-size: x-large;
+    padding: 10px;
+
+}
+
 .copyright{
     width: 100%;
     text-align: center;
@@ -378,6 +393,8 @@ form input, form textarea{
     background: #262626;
     margin-top: 20px;
 }
+
+
 
 
 /* ------------------for small screen------------- */
@@ -446,6 +463,12 @@ nav .fa-solid{
     .contact-left, .contact-right{
         flex-basis: 100%;
     }
+    #msg{
+
+        margin-left: 0%;
+        margin-right: 0%;
+    
+    }
     .copyright{
         font-size: 14px;
     }
@@ -453,7 +476,3 @@ nav .fa-solid{
 
 }
 
-#span{
-    color: green;
-    margin-top: -10px;
-}
