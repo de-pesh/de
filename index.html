@@ -182,10 +182,10 @@
                     <a href="/images/resume.pdf" download class="btn btn2">Download Resume</i></a>
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name = "name" placeholder="Your name" required>
                         <input type="email" name ="email" placeholder="Your mail" required>
-                        <textarea name = "meaasge" row = 6 placeholder="Message"></textarea>
+                        <textarea name = "messasge" row = 6 placeholder="Message"></textarea>
                         <button type="submit" class="btn btn2">Submit Response</button>
                     </form>
                 </div>
@@ -219,5 +219,16 @@
             sidemenu.style.right = "-200px";
         }
     </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxl9sCr87mDlvyqinjxD_26tTJEKn2-ImVVrL-yAAhCg-Sta_56csrptpcQ6Q_9dy35/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html>
