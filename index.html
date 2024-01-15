@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deepesh</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1dc48f9aad.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="/images/logo.png" alt="de" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-chevron-right" onclick="closemenu()"></i>
+                </ul>
+                
+                <i class="fa-solid fa-chevron-left" onclick="openmenu()"></i>
+            </nav>
+            <div class="header_text">
+                <p>Data Analyst</p>
+                <h1>Hi, I am <span>Deepesh</span><br> From Nepal</h1>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------about------------------ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col1">
+                    <img src="images/me.png">
+                </div>
+                <div class="about-col2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of
+                         the printing and typesetting industr
+                         . Lorem Ipsum has been the industry's
+                          standard dummy text ever since the 
+                          1500s, when an unknown printer took 
+                          a galley of type and scrambled it to 
+                          make a type specimen book. It has 
+                          survived not only five centuries, 
+                          but also the leap into electronic 
+                          typesetting, remaining essentially 
+                          unchanged. It was popularised in the 
+                          1960s with the release of Letraset 
+                          sheets containing Lorem Ipsum
+                           passages, and more recently with 
+                           desktop publishing software like 
+                           Aldus PageMaker including versions 
+                           of Lorem Ipsum.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opnetab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opnetab('expeirence')">Expeirence</p>
+                        <p class="tab-links" onclick="opnetab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI UX</span><br>Design web apps</li>
+                            <li><span>web dev</span><br>Designddd</li>
+                            <li><span>UI app</span><br>Desigddd</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="expeirence">
+                        <ul>
+                            <li><span>Exp1</span><br>hehe</li>
+                            <li><span>Exp 2</span><br>jeje</li>
+                            <li><span>Exp 3</span><br>huhu</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>school</span><br>good</li>
+                            <li><span>high school</span><br>bad</li>
+                            <li><span>Univ</span><br>too bad</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------------services---------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>Web person</h2>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+                        <a>Learn more</a>
+                    </p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-compass-drafting"></i>
+                    <h2>Web Man</h2>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+                        <a>Learn more</a>
+                    </p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-brain"></i>
+                    <h2>Web Woman</h2>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+                        <a>Learn more</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------portfolio---------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">My work</h1>
+            <div class="worklist">
+                <div class="work">
+                    <img src="/images/w1.png">
+                    <div class="layer">
+                        <h3>
+                            Suzume door
+                        </h3>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more
+                        </p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="/images/w2.png">
+                    <div class="layer">
+                        <h3>
+                            Suzume door
+                        </h3>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more
+                        </p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="/images/w3.png">
+                    <div class="layer">
+                        <h3>
+                            Suzume door
+                        </h3>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more
+                        </p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <!-- -------------------contact-------------- -->
+    <div id="contact">
+        <div class="container">
+            <h1 class="subtitle">Contact Me</h1>
+            <div class="row">
+                <div class="contact-left">
+                    <i class="fa-solid fa-paper-plane"></i> 
+                    <p>deepesh1379@gmail.com</p>
+                    <i class="fa-solid fa-phone"></i> 
+                    <p>8393095919</p>
+                    <div class="social-icons">
+                        <a href="social1"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="social2"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="/images/resume.pdf" download class="btn btn2">Download Resume</i></a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name = "name" placeholder="Your name" required>
+                        <input type="email" name ="email" placeholder="Your mail" required>
+                        <textarea name = "messasge" row = 6 placeholder="Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit Response</button>
+                    </form>
+                    
+                </div>
+            </div>
+            <span id="msg"></span>
+            <span id="load"></span>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Deepesh</p>
+        </div>
+    </div>
+    <script>
+        
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        var sidemenu = document.getElementById("sidemenu");
+        function opnetab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxl9sCr87mDlvyqinjxD_26tTJEKn2-ImVVrL-yAAhCg-Sta_56csrptpcQ6Q_9dy35/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg");
+        const load = document.getElementById("load");
+        
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          load.style.display = "flex";
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                load.style.display = "none";
+                msg.innerHTML = "Submitted Successfully"
+                msg.style.backgroundColor = "green";
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                    msg.style.backgroundColor = "#ffffff00";
+                }, 5000)
+                form.reset()
+    
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
