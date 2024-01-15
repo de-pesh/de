@@ -373,7 +373,6 @@ form input, form textarea{
 
 #msg{
     color: rgb(255, 255, 255);
-    color: #ffffff00;
     margin-top: -30px;
     margin-left: 25%;
     margin-right: 25%;
@@ -382,10 +381,35 @@ form input, form textarea{
     align-self: center;
     background-color: rgba(172, 255, 47, 0);
     border-radius: 10px;
-    font-size: x-large;
+    font-size: large;
     padding: 10px;
 
 }
+
+#load{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 10px;
+    height: 10px;
+    font-size: x-large;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-left: 48%;
+    margin-right: 50%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding: 1%;
+    border: 6px solid;
+    border-color: #ff3030 transparent #ff3030 transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
+    }
+  } 
 
 .copyright{
     width: 100%;
