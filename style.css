@@ -45,8 +45,8 @@ nav{
     top:0;
     left: 0;
     position: fixed;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 30px;
     padding-right: 50px;
     backdrop-filter: blur(50px);
@@ -55,7 +55,8 @@ nav{
 }
 
 .logo{
-    width: 70px;
+    width: 45px;
+    margin-left: 30px;
 }
 
 nav ul li{
