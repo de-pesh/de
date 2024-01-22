@@ -48,8 +48,8 @@ nav{
     padding-bottom: 5px;
     padding-left: 30px;
     padding-right: 50px;
-    /* backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(50px); */
+    /* backdrop-filter: blur(50px); */
+    -webkit-backdrop-filter: blur(50px);
     z-index: 10; 
 }
 
@@ -467,7 +467,6 @@ nav .fa-solid{
         z-index: 999;
         padding-top: 50px;
         transition: right 0.5s;
-        background-color: #6e6e6e29;
         backdrop-filter: blur(30px);
         -webkit-backdrop-filter: blur(30px);
     }
