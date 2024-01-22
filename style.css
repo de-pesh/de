@@ -448,21 +448,22 @@ nav .fa-solid{
         display: block;
         font-size: 25px;
     }
-
-
     nav ul{
+        content: '';
         position: fixed;
         top: 0;
         right: -200px;
         width: 200px;
         height: 100vh;
+        z-index: 999;
         padding-top: 50px;
-        z-index: 5;
         transition: right 0.5s;
-        background-color: #7070704f;
+        background-color: #ff797958;
         backdrop-filter: blur(30px);
         -webkit-backdrop-filter: blur(30px);
     }
+
+
     nav ul li{
         display: block;
         margin: 25px;
