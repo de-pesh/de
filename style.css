@@ -170,7 +170,7 @@ nav ul li a:hover::after{
     flex-basis: 60%;
 }
 .subtitle{
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 600;
     color: white;
     
@@ -216,7 +216,7 @@ nav ul li a:hover::after{
 }
 
 .tab-contents ul li span{
-    color: #ff8787;
+    color: #ff5e5e;
     font-size: 14px;
 }
 
@@ -318,14 +318,14 @@ nav ul li a:hover::after{
 }
 
 .layer h3{
-    font-weight: 500;
+    font-weight: 200;
     margin-bottom: 20px;
 }
 .layer a{
     margin-top: 20px;;
     color: #ff2424;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 60px;
     background-color: #b7b7b761;
     width: 60px;
@@ -506,6 +506,8 @@ nav .fa-solid{
         left:0;
     }
 
+
+
     .header_text{
         margin-top:50vh;
         text-shadow: 2px 1px 12px #FF0000;
@@ -555,7 +557,10 @@ nav .fa-solid{
 
     }
     .subtitle{
-        font-size: 40px;
+        font-size: 30px;
+    }
+    .layer p{
+        font-size: 15px;
     }
     .about-col1, .about-col2{
         flex-basis: 100%;
@@ -578,6 +583,7 @@ nav .fa-solid{
     .copyright{
         font-size: 14px;
     }
+
 
 
 }

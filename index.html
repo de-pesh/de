@@ -8,9 +8,10 @@
     <script src="https://kit.fontawesome.com/1dc48f9aad.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id = "bd">
     <div id="header">
         <div class="container">
-            <nav>
+            <nav id = "navv">
                     <img src="images/logo.png" alt="de" class="logo">
                     <ul id="sidemenu">
                         <li><a href="#header">Home</a></li>
@@ -94,7 +95,8 @@
             <h1 class="subtitle">My Services</h1>
             <div class="services-list">
                 <div>
-                    <i class="fa-solid fa-laptop-code"></i>
+                    <i class="fa-solid fa-compass-drafting"></i>
+                    
                     <h2>Data Analysis</h2>
                     <p>
                         I excel in data analysis by leveraging 
@@ -112,7 +114,7 @@
                     </p>
                 </div>
                 <div>
-                    <i class="fa-solid fa-compass-drafting"></i>
+                    <i class="fa-solid fa-laptop-code"></i>
                     <h2>Web Development</h2>
                     <p>
                         I possess strong skills in web development, 
@@ -157,37 +159,44 @@
             <h1 class="subtitle">My work</h1>
             <div class="worklist">
                 <div class="work">
-                    <img src="images/w1.png">
+                    <img src="images/work1.jpg">
                     <div class="layer">
                         <h3>
-                            Suzume door
+                            CAS
                         </h3>
                         <p>
-                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more
+                            Certificate authentication and verification system using 
+                            etherrium blockchain. Smart contract is written in solidity.
+                            Front-end is created using HTML and CSS and connected to backend
+                            using Javascript.
                         </p>
                         <a href="#"><i class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="images/w2.png">
+                    <img src="images/work2.png">
                     <div class="layer">
                         <h3>
-                            Suzume door
+                            CFC
                         </h3>
                         <p>
-                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more
+                            Versatile Application that manages donations and its proper usage.
+                            It gives details about how donated money is spent and allows users 
+                            to donate as per their comfort. App is created using flutter framework. 
                         </p>
                         <a href="#"><i class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="images/w3.png">
+                    <img src="images/work3.png">
                     <div class="layer">
                         <h3>
-                            Suzume door
+                            Terror Analysis
                         </h3>
                         <p>
-                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more
+                            Analysis of the terrorism dataset to get the intricate details. 
+                            It is acomplished using python libraries like numpy, pandas, Matplotlib, seaborn.
+                            And jupyter notebook is used as development environment. 
                         </p>
                         <a href="#"><i class="fa-solid fa-link"></i></a>
                     </div>
@@ -235,6 +244,8 @@
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
         var sidemenu = document.getElementById("sidemenu");
+        var body = document.getElementById("bd");
+        var nav = document.getElementById("navv");
         function opnetab(tabname){
             for(tablink of tablinks){
                 tablink.classList.remove("active-link");
@@ -246,6 +257,37 @@
             document.getElementById(tabname).classList.add("active-tab");
         }
 
+
+        body.addEventListener("click", function () {
+            console.log("hehe");
+            closemenu();
+        }, false);
+        sidemenu.addEventListener("click", function (ev) {
+            ev.stopPropagation(); //this is important! If removed, you'll get both alerts
+        }, false);
+        navv.addEventListener("click", function (ev) {
+            ev.stopPropagation(); //this is important! If removed, you'll get both alerts
+        }, false);
+
+        
+        let touchstartX = 0
+        let touchendX = 0
+            
+        function checkDirection() {
+        if (touchendX < touchstartX) alert('swiped left!')
+        if (touchendX > touchstartX) alert('swiped right!')
+        }
+
+        document.addEventListener('touchstart', e => {
+        touchstartX = e.changedTouches[0].screenX
+        })
+
+        document.addEventListener('touchend', e => {
+        touchendX = e.changedTouches[0].screenX
+        checkDirection()
+        })
+
+        
         
         function openmenu(){
             sidemenu.style.right = "0";
@@ -260,6 +302,7 @@
         const msg = document.getElementById("msg");
         const load = document.getElementById("load");
         const b = document.getElementById("submit_btn");
+        
         
         
       
@@ -283,7 +326,19 @@
     
             })
             .catch(error => console.error('Error!', error.message))
-        })
+        });
+
+        
+
+
+
+        
+        
+        
+        
+
+
       </script>
+      </div>
 </body>
 </html>
