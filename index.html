@@ -285,43 +285,27 @@
         const msg = document.getElementById("msg");
         const load = document.getElementById("load");
         const b = document.getElementById("submit_btn");
-        
-        
-        
-      
         form.addEventListener('submit', e => {
-          e.preventDefault()
-          load.style.display = "flex";
-          b.style.background = "gray";
-          b.style.cursor = "not-allowed";
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                load.style.display = "none";
-                msg.innerHTML = "Submitted Successfully"
-                msg.style.backgroundColor = "green";
-                setTimeout(function(){
-                    msg.innerHTML = ""
-                    msg.style.backgroundColor = "#ffffff00";
-                }, 5000)
-                form.reset()
-                b.style.background = "#ff2424";
-                b.style.cursor = "default";
-    
-            })
-            .catch(error => console.error('Error!', error.message))
+            e.preventDefault()
+            load.style.display = "flex";
+            b.style.background = "gray";
+            b.style.cursor = "not-allowed";
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    load.style.display = "none";
+                    msg.innerHTML = "Submitted Successfully"
+                    msg.style.backgroundColor = "green";
+                    setTimeout(function(){
+                        msg.innerHTML = ""
+                        msg.style.backgroundColor = "#ffffff00";
+                    }, 5000)
+                    form.reset()
+                    b.style.background = "#ff2424";
+                    b.style.cursor = "default";
+                })
+                .catch(error => console.error('Error!', error.message))
         });
-
-        
-
-
-
-        
-        
-        
-        
-
-
-      </script>
-      </div>
+    </script>
+    </div>
 </body>
 </html>
