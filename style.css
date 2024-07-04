@@ -274,6 +274,7 @@ nav ul li a:hover::after {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 40px;
   margin-top: 50px;
+  
 }
 
 .work {
@@ -305,7 +306,7 @@ nav ul li a:hover::after {
   justify-content: center;
   flex-direction: column;
   padding: 0 40px;
-  text-align: center;
+  text-align: justify;
   transition: height 0.5s;
 }
 
