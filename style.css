@@ -279,6 +279,7 @@ nav ul li a:hover::after {
 .work {
   border-radius: 20px;
   border-color: red;
+  background: #3e3e3e;
   border: width 4px;
   position: relative;
   overflow: hidden;
