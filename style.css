@@ -159,7 +159,7 @@ nav ul li a:hover::after {
 }
 .about-col1 img {
   width: 100%;
-  border-radius: 15px;
+  border-radius: 30px;
 }
 .about-col2 {
   flex-basis: 60%;
