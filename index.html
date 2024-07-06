@@ -26,7 +26,7 @@
             </nav>
             <div class="header_text">
                 <p>Data Analyst</p>
-                <h1>Hi, I am <span>hover test2</span><br> </h1><br>
+                <h1>Hi, I am <span>work hover</span><br> </h1><br>
                 <p>I Turn Data into Actionable Insights</p>
             </div>
         </div>
@@ -127,12 +127,10 @@
                     <i class="fa-solid fa-brain"></i>
                     <h2>Machine Learning Solutions</h2>
                     <p>
-                        I am a skilled software developer proficient in 
-                        Python, C++, and Java. I design, code, and test 
-                        software solutions to solve real-world problems, 
-                        utilizing tools like Git and GitHub for efficient 
-                        collaboration. I possess ability to develop 
-                        applications that meet user needs and business goals.
+                        Develop and implement machine learning models for classification, 
+                        regression, and clustering. Expertise in using Python libraries 
+                        such as scikit-learn and TensorFlow to build, train, and evaluate models.
+                        Apply advanced validation techniques to ensure model accuracy and reliability.
                         <p><a>Learn more</a></p>
                     </p>
                 </div>
@@ -315,8 +313,23 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             var elements = document.querySelectorAll('.phone-hover');
+            var elements2 = document.querySelectorAll('.layer');
         
             elements.forEach(function (element) {
+                element.addEventListener('touchstart', function () {
+                    element.classList.add('hover');
+                });
+        
+                element.addEventListener('touchend', function () {
+                    element.classList.remove('hover');
+                });
+        
+                element.addEventListener('touchcancel', function () {
+                    element.classList.remove('hover');
+                });
+            });
+
+            elements2.forEach(function (element) {
                 element.addEventListener('touchstart', function () {
                     element.classList.add('hover');
                 });
