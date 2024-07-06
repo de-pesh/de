@@ -26,7 +26,7 @@
             </nav>
             <div class="header_text">
                 <p>Data Analyst</p>
-                <h1>Hi, I am <span>work hover</span><br> </h1><br>
+                <h1>Hi, I am <span>ab check kar to</span><br> </h1><br>
                 <p>I Turn Data into Actionable Insights</p>
             </div>
         </div>
@@ -108,7 +108,7 @@
                         statistical analysis, and visualization.
                         Specialize in predictive and prescriptive analytics, including model
                         development and evaluation.
-                        <p><a>Learn more</a></p>
+                        <p><a href="https://www.google.com/search?q=Dashboard+Creation+and+Data+Visualization&oq=Dashboard+Creation+and+Data+Visualization">Learn more</a></p>
                     </p>
                 </div>
                 <div class="phone-hover">
@@ -313,8 +313,7 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             var elements = document.querySelectorAll('.phone-hover');
-            var elements2 = document.querySelectorAll('.layer');
-        
+            
             elements.forEach(function (element) {
                 element.addEventListener('touchstart', function () {
                     element.classList.add('hover');
@@ -328,8 +327,12 @@
                     element.classList.remove('hover');
                 });
             });
+        });
 
-            elements2.forEach(function (element) {
+        document.addEventListener('DOMContentLoaded', function () {
+            var elements = document.querySelectorAll('.work');
+        
+            elements.forEach(function (element) {
                 element.addEventListener('touchstart', function () {
                     element.classList.add('hover');
                 });
