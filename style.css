@@ -260,7 +260,7 @@ nav ul li a:hover::after {
   display: inline-block;
 }
 
-.services-list div:hover, .services-list div:active{
+.services-list div:hover{
   background-color: #ff3030;
   transform: translateY(-10px);
 }

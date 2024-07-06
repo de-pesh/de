@@ -70,15 +70,21 @@
                     <div class="tab-contents" id="expeirence">
                         <ul>
                             <li><span><b>DATA SCIENCE INTERN AT OASIS INFOBYTE</b></span><br><br>
-                                <span>-></span> Conducted comprehensive data analysis projects to extract meaningful insights and develop predictive models for informed decision-making.<br><br>
-                                <span>-></span> <b> Unemployment Analysis:</b> Analyzed unemployment data to identify trends and factors. Cleaned data, performed statistical analysis, and created visualizations.<br><br>
-                                <span>-></span> <b> Car Price Prediction: </b>Developed a predictive model to estimate car prices using features like make, model, year, and mileage. Preprocessed data, applied machine learning algorithms, and evaluated performance.<br><br>
+                                <span>-></span> Conducted comprehensive data analysis projects to extract meaningful 
+                                insights and develop predictive models for informed decision-making.<br><br>
+                                <span>-></span> <b> Unemployment Analysis:</b> Analyzed unemployment data to 
+                                identify trends and factors. Cleaned data, performed statistical analysis, and created visualizations.<br><br>
+                                <span>-></span> <b> Car Price Prediction: </b>Developed a predictive model to 
+                                estimate car prices using features like make, model, year, and mileage. Preprocessed data, 
+                                applied machine learning algorithms, and evaluated performance.<br><br>
                             </li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span><b>COLLEGE</b></span><br><br><span>-> </span> CV Raman Global University, Odisha-India<br><br><span>-> </span> B.Tech (Computer Science and Engineering)<br><br><span>-> </span> CGPA: 9.13</li><br>
+                            <li><span><b>COLLEGE</b></span><br><br><span>-> </span> 
+                            CV Raman Global University, Odisha-India<br><br><span>-> </span> 
+                            B.Tech (Computer Science and Engineering)<br><br><span>-> </span> CGPA: 9.13</li><br>
                         </ul>
                     </div>
                 </div>
@@ -304,6 +310,25 @@
                     b.style.cursor = "default";
                 })
                 .catch(error => console.error('Error!', error.message))
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var elements = document.querySelectorAll('.services-list div');
+        
+            elements.forEach(function (element) {
+                element.addEventListener('touchstart', function () {
+                    element.classList.add('hover');
+                });
+        
+                element.addEventListener('touchend', function () {
+                    element.classList.remove('hover');
+                });
+        
+                element.addEventListener('touchcancel', function () {
+                    element.classList.remove('hover');
+                });
+            });
         });
     </script>
     </div>
