@@ -26,7 +26,7 @@
             </nav>
             <div class="header_text">
                 <p>Data Analyst</p>
-                <h1>Hi, I am <span>hover test</span><br> </h1><br>
+                <h1>Hi, I am <span>hover test2</span><br> </h1><br>
                 <p>I Turn Data into Actionable Insights</p>
             </div>
         </div>
@@ -97,7 +97,7 @@
         <div class="container">
             <h1 class="subtitle">My Services</h1>
             <div class="services-list">
-                <div>
+                <div class="phone-hover">
                     <i class="fa-solid fa-compass-drafting"></i>
                     
                     <h2>Data Analysis & Insights</h2>
@@ -111,7 +111,7 @@
                         <p><a>Learn more</a></p>
                     </p>
                 </div>
-                <div>
+                <div class="phone-hover">
                     <i class="fa-solid fa-laptop-code"></i>
                     <h2>Dashboard Creation and Data Visualization</h2>
                     <p>
@@ -123,7 +123,7 @@
                         <p><a>Learn more</a></p>
                     </p>
                 </div>
-                <div>
+                <div class="phone-hover">
                     <i class="fa-solid fa-brain"></i>
                     <h2>Machine Learning Solutions</h2>
                     <p>
@@ -314,7 +314,7 @@
 
 
         document.addEventListener('DOMContentLoaded', function () {
-            var elements = document.querySelectorAll('.services-list div');
+            var elements = document.querySelectorAll('.phone-hover');
         
             elements.forEach(function (element) {
                 element.addEventListener('touchstart', function () {
