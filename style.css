@@ -10,7 +10,7 @@ html {
 
 body {
   background-color: rgb(29, 29, 29);
-  color: aliceblue;
+  color: rgb(219, 219, 219);
   z-index: -1;
 }
 
@@ -162,6 +162,7 @@ nav ul li a:hover::after {
   box-shadow: 5px 5px 5px #5d5d5d;
 }
 .about-col1 img {
+  background-color: #d8d8d8;
   width: 100%;
   border-radius: 30px;
 }
@@ -431,7 +432,7 @@ form textarea {
   width: 100%;
   border: 0;
   outline: none;
-  background: #c7c7c7;
+  background: rgb(219, 219, 219);
   padding: 15px;
   margin: 18px 0px;
   font-size: large;
