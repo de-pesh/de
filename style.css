@@ -75,7 +75,7 @@ nav {
   padding-left: 30px;
   padding-right: 50px;
   /* backdrop-filter: blur(50px); */
-  -webkit-backdrop-filter: blur(50px);
+  /* -webkit-backdrop-filter: blur(50px); */
   z-index: 20;
 }
 
