@@ -303,6 +303,8 @@ nav ul li a:hover::after {
   position: relative;
   overflow: hidden;
 }
+
+
 .work img {
   width: 100%;
   border-radius: 30px;
