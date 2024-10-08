@@ -11,7 +11,7 @@ html {
 body {
   background-color: rgb(29, 29, 29);
   color: rgb(219, 219, 219);
-  z-index: -1;
+  z-index: -2;
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -83,7 +83,7 @@ nav::before {
   content: "";
   position: absolute;
   backdrop-filter: blur(50px);
-  /* -webkit-backdrop-filter: blur(50px); */
+  -webkit-backdrop-filter: blur(50px);
   height: 100%;
   z-index: -1;
   right: 0;
@@ -562,7 +562,7 @@ nav .fa-solid {
     right: -200px;
     width: 200px;
     height: 100vh;
-    z-index: 9999;
+    z-index: 99999;
     padding-top: 50px;
     transition: right 0.5s;
     backdrop-filter: blur(50px);
