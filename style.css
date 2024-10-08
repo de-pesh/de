@@ -562,11 +562,11 @@ nav .fa-solid {
     right: -200px;
     width: 200px;
     height: 100vh;
-    z-index: 999;
+    z-index: 9999;
     padding-top: 50px;
     transition: right 0.5s;
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
   }
 
   nav ul li {
