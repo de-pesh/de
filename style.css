@@ -82,8 +82,9 @@ nav {
 nav::before {
   content: "";
   position: absolute;
-  backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(50px);
+  background-color: rgb(29, 29, 29);
+  /* backdrop-filter: blur(50px); ////////////commented by me for blur issue
+  -webkit-backdrop-filter: blur(50px); */
   height: 100%;
   z-index: -1;
   right: 0;
@@ -289,7 +290,8 @@ nav ul li a:hover::after {
 
 .worklist {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* updated from 330 to 250 to make it responsive */
   grid-gap: 40px;
   margin-top: 50px;
   
@@ -565,8 +567,9 @@ nav .fa-solid {
     z-index: 99999;
     padding-top: 50px;
     transition: right 0.5s;
-    backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(50px);
+    background-color: rgb(29, 29, 29);
+    /* backdrop-filter: blur(50px); commented by me for blur issue
+    -webkit-backdrop-filter: blur(50px); */
   }
 
   nav ul li {
