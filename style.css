@@ -154,6 +154,10 @@ nav ul li a:hover::after {
   color: #ff2424;
 }
 
+.hiree{
+  display: flex;
+}
+
 /* -------------about---------------- */
 
 #about {
@@ -437,6 +441,16 @@ nav ul li a:hover::after {
   width: 100%;
 }
 .btn.btn2:hover {
+  background: #00000000;
+}
+
+.btn.hire{
+  background: #ff2424;
+  color: white;
+  font-size: large;
+}
+
+.btn.hire:hover{
   background: #00000000;
 }
 
