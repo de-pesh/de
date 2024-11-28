@@ -92,8 +92,8 @@ nav::before {
 }
 
 .logo {
-  width: 45px;
-  margin-left: 30px;
+  width: 40px;
+  margin-left: 10px;
 }
 
 nav ul li {
@@ -364,13 +364,20 @@ nav ul li a:hover::after {
   display: none;
 }
 
+@media(hover:hover){
+      .work:hover img {
+        transform: scale(1.1);
+      }
 
-.work:hover img {
-  transform: scale(1.1);
+      .work:hover .layer {
+        height: 100%;
+      }
 }
 
-.work:hover .layer {
-  height: 100%;
+@media(hover:none){
+  .layer {
+    height: 100%;
+  }
 }
 
 .btn {
