@@ -540,7 +540,7 @@ nav .fa-solid {
 
 @media only screen and (max-width: 750px) {
   #header {
-    background-image: url("images/phone.png");
+    background-image: url("images/de.png");
     background-size: contain;
     background-position: center;
     z-index: 1;
