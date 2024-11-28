@@ -549,6 +549,8 @@ nav .fa-solid {
   #header::after {
     content: "";
     position: absolute;
+    /* contain added by me because there is some problem i guess */
+    background-size: contain; 
     background: linear-gradient(
       0deg,
       rgb(0, 0, 0) 0%,
