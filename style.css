@@ -542,12 +542,13 @@ nav .fa-solid {
     background-image: url("images/de.png");
     background-size: contain;
     background-position: center;
-    max-height: 100%;
+    
     z-index: 1;
   }
 
   #header img{
-    background-size: contain;
+    object-fit: contain;
+    max-height: 100%;
   }
 
   .header_text {
