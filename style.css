@@ -256,7 +256,7 @@ nav ul li a:hover::after {
   background: #3e3e3e;
   padding: 40px;
   font-size: 15px;
-
+  /* box-shadow: rgba(255, 255, 255, 0.15) 0px 7px 15px 0px; */
   font-weight: 300;
   border-radius: 30px;
   text-align: justify;
