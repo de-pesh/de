@@ -197,6 +197,7 @@ nav ul li a:hover::after {
 }
 
 .tab-titles {
+  color: white;
   display: flex;
   margin: 20px 0 40px;
 }
