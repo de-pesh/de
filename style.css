@@ -542,7 +542,7 @@ nav .fa-solid {
     background-image: url("images/phone.png");
     background-size: contain;
     /* height: 90vh; */
-    background-position: center bottom;
+    background-position: center top;
     z-index: 1;
   }
 
