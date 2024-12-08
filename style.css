@@ -51,8 +51,8 @@ body {
     rgba(255, 255, 255, 0) 60%
   );
   z-index: 2;
-  height: 105%;
-  width: 105%;
+  height: 100%;
+  width: 100%;
   bottom: 0;
 }
 
@@ -550,6 +550,11 @@ nav .fa-solid {
     /* height: 90vh; */
     background-position: center top;
     z-index: 1;
+  }
+
+  #header::after{
+    height: 105%;
+    width: 105%;
   }
 
   .header_text {
