@@ -82,6 +82,7 @@ nav::before {
   content: "";
   position: absolute;
   /* background-color: rgb(29, 29, 29); */
+  background-color: #00000000;
   backdrop-filter: blur(50px); 
   -webkit-backdrop-filter: blur(50px); 
   /* ////////////commented by me for blur issue */
