@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official portfolio of Deepesh Bhandari - Data Analyst with expertise in Python, SQL, Power BI, and machine learning. Explore projects, skills, and contact details.">
+    <meta name="keywords" content="Deepesh, Deepesh Bhandari, Data Analyst, Python, SQL, Power BI, Machine Learning, Portfolio, Resume, Dashboard, Data Science Projects">
+    <meta name="author" content="Deepesh Bhandari">
+    <meta property="og:title" content="Deepesh Bhandari | Data Analyst Portfolio">
+    <meta property="og:description" content="Explore Deepesh's professional data analytics portfolio with impactful projects, skills, and contact options.">
+    <meta property="og:image" content="https://deepesh-bhandari.com.np/images/mee.png">
+    <meta property="og:url" content="https://deepesh-bhandari.com.np">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://deepesh-bhandari.com.np/">
+    <title>Deepesh Bhandari | Software Engineer | Data Analyst | Portfolio & Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <script src="https://kit.fontawesome.com/1dc48f9aad.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="hero">
+        <div class="navbar">
+            <div id = "logo">
+                    <a href="#header"><img src="images/logo.png" alt="de" class="logo"></a>
+            </div>
+            <div class="nav-content">
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fa-solid fa-chevron-right" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-chevron-left" onclick="openmenu()"></i>
+            </div>
+        </div>
+        
+            <div class="header_text">
+                <p>Software Engineer & Data Analyst</p>
+                <h1>Hi, I am <span>Deepesh</span><br> </h1><br>
+                <p><i>I Turn Data Into Decisions & Ideas Into Code</i></p>
+                <div class="hiree">
+                <p><a href="#contact" style="text-decoration:none"><button class="btn hire">Hire Me</button></a></p>
+                
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------about------------------ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col1">
+                    <img src="images/mee.png" alt="Deepesh">
+                </div>
+                <div class="about-col2">
+                    <h1 class="subtitle">About Me</h1>
+                    <br><br>
+                    <p class="aboutme">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        I am a versatile professional with expertise in software development, 
+                        web development, data analysis, and IT support. With hands-on experience 
+                        in developing responsive websites, building machine learning models, and 
+                        designing blockchain-based solutions, I thrive on solving complex challenges 
+                        through technology. I am passionate about leveraging my skills to drive 
+                        innovation and efficiency. Let’s connect and explore opportunities to collaborate!
+                    </p>
+                    <br><br>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opnetab('skills')"><b>Skills</b></p>
+                        <p class="tab-links" onclick="opnetab('expeirence')"><b>Experience</b></p>
+                        <p class="tab-links" onclick="opnetab('education')"><b>Education</b></p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span><b>PROGRAMMING LANGUAGES</b><br>-></span> Python, &nbsp; SQL, &nbsp; C, &nbsp; C++, &nbsp; Java &nbsp; Javascript </li>
+                            <li><span><b>TOOLS</b><br>-></span> Excel, Power BI, Git, GitHub </li>
+                            <li><span><b>TECHNOLOGIES</b><br>-></span> Machine Learning, Cloud Computing</li>
+                            <li><span><b>PYTHON LIBRARIES</b><br>-></span> Numpy, Pandas, Sklearn, Matplotlib</li>
+                            <li><span><b>SOFT SKILLS</b><br>-></span> Problem Solving, Attention to detail,<br>&nbsp;&nbsp;&nbsp; Teamwork, Communication skills</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="expeirence">
+                        <ul>
+                            <li><span><b>WED DEVELOPMENT INTERN</b></span><br><br>
+                                <span>-></span> Developed and enhanced websites by custom coding, prioritizing responsive, user-friendly 
+                                designs and cross-browser/device compatibility.
+                                <br><br>
+                                <span>-></span> Conducted thorough testing to identify and fix bugs, ensuring optimal website functionality and reliability.
+                                <br><br>
+                            </li>
+                            <li><span><b>DATA SCIENCE INTERN AT OASIS INFOBYTE</b></span><br><br>
+                                <span>-></span> Analyzed unemployment data and identified trends by cleaning, processing, 
+                                and visualizing datasets using Python and statistical methods.
+                                <br><br>
+                                <span>-></span> Built a machine learning model to predict car prices, 
+                                applying data preprocessing and algorithm evaluation to ensure accuracy.
+                                <br><br>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span><b>COLLEGE</b></span><br><br><span>-> </span> 
+                            CV Raman Global University, Odisha-India<br><br><span>-> </span> 
+                            B.Tech Computer Engineering (Software)<br><br><span>-> </span> CGPA: 9.12</li><br>
+
+                            <li><span><b>SCHOOL</b></span><br><br><span>-> </span> 
+                            Gen BC Joshi Army Public School,India<br><br><span>-> </span> 
+                            Science (PCM)<br><br> </li><br>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------------services---------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">My Services</h1>
+            <div class="services-list">
+                <div class="phone-hover">
+                    <i class="fa-solid fa-compass-drafting"></i>
+                    
+                    <h2>Data Analysis & Insights</h2>
+                    <p>
+                        Conduct comprehensive data analysis to extract meaningful 
+                        insights and support data-driven decision-making.
+                        Utilize Python and Jupyter Notebook for data cleaning, transformation,
+                        statistical analysis, and visualization.
+                        Specialize in predictive and prescriptive analytics, including model
+                        development and evaluation.
+                        <p><a href="https://google.com/search?q=Data+Analysis+and+Insights">Learn more</a></p>
+                    </p>
+                </div>
+                <div class="phone-hover">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>Dashboard Creation and Data Visualization</h2>
+                    <p>
+                        Design and develop interactive dashboards using Power BI and Excel to 
+                        visualize key performance metrics.
+                        Create intuitive visualizations that effectively communicate complex data 
+                        insights to stakeholders.Integrate multiple data sources to provide a 
+                        comprehensive view of business performance.
+                        <p><a href="https://google.com/search?q=Dashboard+Creation+and+Data+Visualization">Learn more</a></p>
+                    </p>
+                </div>
+                <div class="phone-hover">
+                    <i class="fa-solid fa-brain"></i>
+                    <h2>Machine Learning Solutions</h2>
+                    <p>
+                        Develop and implement machine learning models for classification, 
+                        regression, and clustering. Expertise in using Python libraries 
+                        such as scikit-learn and TensorFlow to build, train, and evaluate models.
+                        Apply advanced validation techniques to ensure model accuracy and reliability.
+                        <p><a href="https://google.com/search?q=Machine+Learning+Solutions">Learn more</a></p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------portfolio---------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">My works</h1>
+            <div class="worklist">
+                <div class="work">
+                    <img src="images/analyse.png">
+                    <div class="layer">
+                        <h3>
+                            <b> Unemployment Analysis </b>
+                        </h3>
+                        <p class="p1">
+                            I analyzed unemployment data, using Python libraries like pandas and 
+                            numpy to clean and process datasets. By performing statistical analysis 
+                            and creating visualizations with matplotlib and seaborn, I identified 
+                            regional disparities, demographic impacts, and industry-specific trends, 
+                            highlighting key areas for policy intervention.
+                        </p>
+                        <p class="p2">
+                            Analyzed Unemployment data to identify trends and factors. Cleaned data, 
+                            performed statistical analysis, and created visualizations.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/predict.png">
+                    <div class="layer">
+                        <h3>
+                            <b>Car price prediction</b>
+                        </h3>
+                        <p class="p1">
+                            I developed a predictive model in Python to estimate car prices using 
+                            features like make, model, year, and mileage. By preprocessing the data 
+                            and applying algorithms such as linear regression and decision trees, I 
+                            optimized model performance, achieving high accuracy and providing valuable 
+                            insights for strategic pricing.
+                        </p>
+                        <p class="p2">
+                            Developed a predictive model to estimate car prices. Preprocessed data, 
+                            applied machine learning algorithms, and evaluated performance.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/dashboard.png">
+                    <div class="layer">
+                        <h3>
+                            <b>Sales Insights dashboard</b>
+                        </h3>
+                        <p class="p1">
+                            I designed and developed an automated Power BI dashboard for a computer 
+                            hardware business, analyzing data with SQL to track key metrics like 
+                            revenue growth and regional sales performance. This dashboard enabled 
+                            quick, data-driven decision-making, supporting strategic business planning.
+                        </p>
+                        <p class="p2">
+                            Designed and developed an automated Power BI dashboard for a computer 
+                            hardware business. Analyzed data with SQL.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/de-pesh" class="btn">See more</a>
+        </div>
+    </div>
+    <!-- -------------------contact-------------- -->
+    <div id="contact">
+        <div class="container">
+            <h1 class="subtitle">Contact Me</h1>
+            <div class="row">
+                <div class="contact-left">
+                    <i class="fa-solid fa-paper-plane"></i> 
+                    <p>deepesh@deepesh-bhandari.com.np</p>
+                    <i class="fa-solid fa-phone"></i> 
+                    <p>
+                    +971-522850781</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/de-pesh/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/de-pesh"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://youtube.com/@de-pesh"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1rvDUUr0uKRr93C2TWJsjFYNazYJqkPKfzN7_nowcTCM/view" class="btn btn2" target="_blank">View Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name = "name" placeholder="Your name" required>
+                        <input type="email" name ="email" placeholder="Your mail" required>
+                        <textarea name = "messasge" row = 6 placeholder="Message"></textarea>
+                        <button type="submit" class="btn btn2" id="submit_btn">Send Response</button>
+                    </form>
+                    
+                </div>
+            </div>
+            <span id="msg"></span>
+            <span id="load"></span>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Deepesh 2025</p>
+        </div>
+    </div>
+    <script>
+        
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        var sidemenu = document.getElementById("sidemenu");
+        var body = document.getElementById("bd");
+        var nav = document.getElementById("navv");
+        function opnetab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+        body.addEventListener("click", function () {
+            console.log("hehe");
+            closemenu();
+        }, false);
+        sidemenu.addEventListener("click", function (ev) {
+            ev.stopPropagation(); //this is important! If removed, you'll get both alerts
+        }, false);
+        navv.addEventListener("click", function (ev) {
+            ev.stopPropagation(); //this is important! If removed, you'll get both alerts
+        }, false);
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxl9sCr87mDlvyqinjxD_26tTJEKn2-ImVVrL-yAAhCg-Sta_56csrptpcQ6Q_9dy35/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg");
+        const load = document.getElementById("load");
+        const b = document.getElementById("submit_btn");
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            load.style.display = "flex";
+            b.style.background = "gray";
+            b.style.cursor = "not-allowed";
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    load.style.display = "none";
+                    msg.innerHTML = "Submitted Successfully"
+                    msg.style.backgroundColor = "green";
+                    setTimeout(function(){
+                        msg.innerHTML = ""
+                        msg.style.backgroundColor = "#ffffff00";
+                    }, 5000)
+                    form.reset()
+                    b.style.background = "#ff2424";
+                    b.style.cursor = "default";
+                })
+                .catch(error => console.error('Error!', error.message))
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var elements = document.querySelectorAll('.phone-hover');
+
+            elements.forEach(function (element) {
+                element.addEventListener('touchstart', function () {
+                    element.classList.add('hover');
+                });
+        
+                element.addEventListener('touchend', function () {
+                    element.classList.remove('hover');
+                });
+        
+                element.addEventListener('touchcancel', function () {
+                    element.classList.remove('hover');
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var elements = document.querySelectorAll('.work');
+        
+            elements.forEach(function (element) {
+                element.addEventListener('touchstart', function () {
+                    element.classList.add('hover');
+                });
+        
+                element.addEventListener('touchend', function () {
+                    element.classList.remove('hover');
+                });
+        
+                element.addEventListener('touchcancel', function () {
+                    element.classList.remove('hover');
+                });
+            });
+        });
+    </script>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QRZ19PTY8W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QRZ19PTY8W');
+</script>
+</body>
+</html>
