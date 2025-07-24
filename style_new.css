@@ -3344,7 +3344,7 @@ label {
 }
 
 .nav-link:hover {
-  color: #1a1b1fbf;
+  color: #ff0000;
 }
 
 .nav-link:focus-visible, .nav-link[data-wf-focus-visible] {
