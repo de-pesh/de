@@ -2,11 +2,13 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   font-family: sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
 }
+
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
@@ -3344,7 +3346,9 @@ label {
 }
 
 .nav-link:hover {
-  color: #ff0000;
+  font-weight:bold;
+  color: red;
+  transition: 500ms;
 }
 
 .nav-link:focus-visible, .nav-link[data-wf-focus-visible] {
