@@ -3343,12 +3343,12 @@ label {
   font-size: 14px;
   line-height: 20px;
   text-decoration: none;
+  transition: 500ms;
 }
 
 .nav-link:hover {
   font-weight:bold;
   color: red;
-  transition: 500ms;
 }
 
 .nav-link:focus-visible, .nav-link[data-wf-focus-visible] {
@@ -3589,6 +3589,11 @@ label {
   max-width: 30%;
   margin: 10px;
   padding-bottom: 0;
+  transition-duration: 500ms;
+}
+
+.team-block:hover{
+  transform: scaleX(1.1) scaleY(1.1);
 }
 
 .team-member-image-two {
@@ -3802,6 +3807,11 @@ label {
   border-radius: 20px;
   max-width: 30%;
   margin: 10px 10px 40px;
+  transition-duration: 500ms;
+}
+
+.work:hover{
+  transform: scaleX(1.1) scaleY(1.1);
 }
 
 .div-block-4 {
