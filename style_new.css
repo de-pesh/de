@@ -3473,9 +3473,11 @@ label {
 
 .hero {
   background-color: #f5f7fa00;
-  background-image: linear-gradient(0deg, #000, #fff0 72%), url("https://cdn.prod.website-files.com/671133739f907da52083c651/68805013e31af503d5b5ab38_de.webp");
+  /* background-image: linear-gradient(0deg, #000, #fff0 72%), url("https://cdn.prod.website-files.com/671133739f907da52083c651/68805013e31af503d5b5ab38_de.webp"); */
+  background-image: linear-gradient(0deg, #000, #fff0 72%), url("images/deep.png");
   background-position: 0 0, 100%;
-  background-repeat: repeat, repeat-y;
+  /* background-repeat: repeat, repeat-y; */
+  background-repeat: no-repeat;
   background-size: auto, contain;
   background-attachment: scroll, scroll;
   align-items: center;
@@ -3529,7 +3531,7 @@ label {
 .body {
   color: #fff;
   background-color: #1d1d1d;
-  font-family: Less, Impact, sans-serif;
+  font-family: Less, sans-serif, Impact;
   font-weight: 300;
 }
 
