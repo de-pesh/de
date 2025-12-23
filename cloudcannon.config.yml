@@ -1,0 +1,20 @@
+# cloudcannon.config.yml
+paths:
+  static: /
+
+# This makes common tags editable without needing a class
+editor:
+  default_item_editor: visual
+  
+_enabled_editors:
+  - visual
+  - source
+
+# The "Magic" part: targets specific tags automatically
+_inputs:
+  p:
+    type: html
+  h1:
+    type: text
+  h2:
+    type: text
