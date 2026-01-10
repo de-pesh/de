@@ -208,9 +208,21 @@ nav {
     -webkit-background-clip: text;
     background-clip: text;
     margin-bottom: 24px;
-    opacity: 0;
     animation: fade-in-up 0.8s ease forwards;
     animation-delay: 0.2s;
+}
+
+/* Scroll Animation Classes */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .hero-subtitle {
@@ -387,13 +399,14 @@ nav {
     justify-content: center;
     transition: all 0.2s ease;
     backdrop-filter: blur(12px);
-    box-shadow: var(--shadow-sm);
+
+    box-shadow: var(--shadow-md), var(--inner-glow);
 }
 
 .carousel-btn:hover {
     background: rgba(0, 0, 0, 0.6);
     border-color: var(--border-active);
-    box-shadow: var(--shadow-md), var(--inner-glow);
+    box-shadow: var(--shadow-sm);
     transform: translateY(-50%) scale(1.05);
 }
 
@@ -405,29 +418,46 @@ nav {
     right: 24px;
 }
 
+.carousel-mask {
+    /* Masking for the fade effect */
+    overflow: hidden;
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    /* Allow arrows to sit on top (sibling z-index context) */
+    position: relative;
+    z-index: 1;
+}
+
 .carousel-viewport {
     display: flex;
     gap: 24px;
-    overflow-x: auto;
-    /* Re-enable manual scroll */
-    scroll-snap-type: x mandatory;
-    /* Snap behavior */
+    /* JS Infinite Carousel Override */
+    overflow: visible;
+    scroll-snap-type: none;
+    /* Ensure CSS doesn't fight JS */
+    width: max-content;
+    /* Allow full width for cloned items */
     padding-bottom: 40px;
-    /* Center calculations: 50% of viewport - half card width (450px) */
-    padding-inline: calc(50% - 450px);
-    scrollbar-width: none;
-    /* Apply mask to viewport content only */
-    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    padding-left: 0;
+    /* Reset centering, done via JS transform */
+    padding-right: 0;
+    cursor: grab;
+    will-change: transform;
+}
+
+.carousel-viewport:active {
+    cursor: grabbing;
 }
 
 .carousel-viewport::-webkit-scrollbar {
     display: none;
 }
 
+/* Desktop Card Width */
 .project-card {
-    flex: 0 0 900px;
-    /* Cinematic Width */
+    flex: 0 0 800px;
+    /* Reduced from 900px for better side peeking */
     scroll-snap-align: center;
     background: var(--bg-surface);
     border: 1px solid var(--border-subtle);
@@ -436,6 +466,28 @@ nav {
     position: relative;
     transition: all 0.4s var(--ease-out-expo);
     box-shadow: var(--inner-glow);
+}
+
+/* ... rest of styles ... */
+
+@media (max-width: 768px) {
+    /* ... other mobile styles ... */
+
+    .carousel-wrap {
+        margin-left: -16px;
+        margin-right: -16px;
+        width: calc(100% + 32px);
+    }
+
+    .carousel-viewport {
+        /* Remove padding-inline logic here as JS handles centering now */
+        padding-inline: 0;
+    }
+
+    .project-card {
+        flex: 0 0 85vw;
+        /* 85vw for standard carousel size */
+    }
 }
 
 .project-card:hover {
@@ -513,6 +565,10 @@ nav {
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+
     .hero-title {
         font-size: 42px;
     }
@@ -527,8 +583,28 @@ nav {
         grid-row: auto;
     }
 
+    /* Fix Carousel for Mobile */
+    .carousel-wrap {
+        margin-left: -16px;
+        /* Align with container padding */
+        margin-right: -16px;
+        width: calc(100% + 32px);
+    }
+
+    .carousel-viewport {
+        padding-inline: 5vw;
+        /* Centers the 90vw card (100-90)/2 */
+    }
+
     .project-card {
         flex: 0 0 90vw;
+    }
+
+    .carousel-btn {
+        display: flex;
+        /* Restored arrows */
+        width: 40px;
+        height: 40px;
     }
 }
 
