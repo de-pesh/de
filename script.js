@@ -24,7 +24,7 @@ const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 
 if (viewport && prevBtn && nextBtn) {
-    const scrollAmount = 624; // Card width (600) + Gap (24)
+    const scrollAmount = 924; // Card width (900) + Gap (24)
 
     function triggerSpring(direction) {
         viewport.classList.remove('bump-left', 'bump-right');

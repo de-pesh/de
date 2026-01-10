@@ -360,11 +360,12 @@ nav {
 .carousel-wrap {
     margin-top: 64px;
     position: relative;
-    /* Removed mask from wrapper to keep arrows visible */
+    /* Break out of container slightly */
+    margin-left: -40px;
+    margin-right: -40px;
+    width: calc(100% + 80px);
     overflow: hidden;
-    /* Hide scrollbars */
-    padding: 0 40px;
-    /* Space for arrows */
+    padding: 0;
 }
 
 .carousel-btn {
@@ -372,10 +373,12 @@ nav {
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    /* Slightly larger targets */
+    height: 56px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.3);
+    /* Darker back for contrast over images */
     border: 1px solid var(--border-subtle);
     color: var(--text-primary);
     cursor: pointer;
@@ -383,24 +386,24 @@ nav {
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(12px);
     box-shadow: var(--shadow-sm);
 }
 
 .carousel-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.6);
     border-color: var(--border-active);
     box-shadow: var(--shadow-md), var(--inner-glow);
+    transform: translateY(-50%) scale(1.05);
 }
 
 .prev-btn {
-    left: 0;
+    left: 24px;
 }
 
 .next-btn {
-    right: 0;
+    right: 24px;
 }
-
 
 .carousel-viewport {
     display: flex;
@@ -410,12 +413,12 @@ nav {
     scroll-snap-type: x mandatory;
     /* Snap behavior */
     padding-bottom: 40px;
-    /* Center calculations: 50% of viewport - half card width (300px) */
-    padding-inline: calc(50% - 300px);
+    /* Center calculations: 50% of viewport - half card width (450px) */
+    padding-inline: calc(50% - 450px);
     scrollbar-width: none;
     /* Apply mask to viewport content only */
-    mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
 }
 
 .carousel-viewport::-webkit-scrollbar {
@@ -423,7 +426,8 @@ nav {
 }
 
 .project-card {
-    flex: 0 0 600px;
+    flex: 0 0 900px;
+    /* Cinematic Width */
     scroll-snap-align: center;
     background: var(--bg-surface);
     border: 1px solid var(--border-subtle);
