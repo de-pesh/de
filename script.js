@@ -65,10 +65,24 @@ class InfiniteCarousel {
         this.setupClones();
 
         // 3. Set Initial Position (Center real item 1)
-        // We have 2 clones at start.
-        // Index 0 (Real Item 1) starts at 2 * cardWidth.
-        // We want that point to be at centeringOffset.
-        // So TranslateX = centeringOffset - (2 * cardWidth).
+        // Offset Calculation:
+        // We want the CENTER of "Real Item 1" (which is effectively Index 0 of real items) to be at CENTER of Window.
+        // Current coordinate system: 0 is Start of Viewport/Track.
+        // Screen Center X relative to Track Start = CenteringOffset.
+        // Real Item 1 Start X relative to Track Start = 2 * cardWidth.
+        // Real Item 1 Center X = (2 * cardWidth) + (cardVisualWidth / 2).
+        // We want: Translate + Real Item 1 Center X = Screen Center X (relative to wrap/window?).
+        // Actually simpler:
+        // We want Real Item 1 to sit at CenteringOffset.
+        // Our "CenteringOffset" variable is calculated as the Translate value needed to put Index 0 at Center.
+
+        // So Initial Translate = CenteringOffset.
+        // But wait, setupClones adds 2 items BEFORE.
+        // So the "Index 0" logic in touchEnd assumes we are talking about relative index.
+        // Let's refine:
+        // offset = CenteringOffset - (2 * cardWidth).
+        // This puts "Real Item 1" (which is at +2*W position) at the Centering spot.
+
         this.offset = this.centeringOffset - (2 * this.cardWidth);
 
         this.currentTranslate = this.offset;
@@ -136,12 +150,26 @@ class InfiniteCarousel {
             const gap = parseFloat(style.gap) || 24;
             this.cardWidth = card.offsetWidth + gap;
 
-            // Viewport/Window width calculation
-            const viewportW = this.wrap.offsetWidth;
-            // Center position = (Container Width - Card Width) / 2
-            // Note: Card width here includes gap, visually we center the card element itself.
-            // So we use card.offsetWidth for the visual centering math.
-            this.centeringOffset = (viewportW - card.offsetWidth) / 2;
+            // Universal Centering Math
+            // We want the card to be centered on the WINDOW.
+            // Screen Center = window.innerWidth / 2.
+            // Wrapper Start = this.wrap.getBoundingClientRect().left.
+            // Target Center relative to Wrapper = (window.innerWidth / 2) - Wrapper Start.
+            // Center of Card needs to align with Target Center.
+            // Left of Card = Target Center - (card.offsetWidth / 2).
+            // CenteringOffset = The translation X that places "Item 0" (Start of track) such that... wait.
+            // CenteringOffset is the "Start Position of the Item Slot 0" relative to wrapper?
+            // "centeringOffset" usually effectively means: "The left margin required to center an item".
+
+            // So: centeringOffset = TargetCenter - (card.offsetWidth / 2).
+            // This is the X position (relative to wrap) where the card SHOULD start.
+
+            const wrapRect = this.wrap.getBoundingClientRect();
+            // Use window width for center point
+            const screenCenter = window.innerWidth / 2;
+            const targetCenterInWrap = screenCenter - wrapRect.left;
+
+            this.centeringOffset = targetCenterInWrap - (card.offsetWidth / 2);
         }
     }
 
@@ -167,15 +195,18 @@ class InfiniteCarousel {
         this.isDragging = false;
         this.viewport.style.cursor = 'grab';
 
-        // Optional: Snap to nearest card on release
-        const relativePos = this.targetTranslate - this.centeringOffset;
-        const indexFloat = -relativePos / this.cardWidth;
+        // Aggressive Snap: Always land on a specific card CENTER
+        // Logic:
+        // We want TargetTranslate to equal: CenteringOffset - (Index * CardWidth)
+        // Current "Relative Position" of the track start vs the "Center Slot" is:
+        // Diff = CenteringOffset - TargetTranslate.
+        // Index = Diff / CardWidth.
+
+        const relativePos = this.centeringOffset - this.targetTranslate;
+        const indexFloat = relativePos / this.cardWidth;
         const nearestIndex = Math.round(indexFloat);
 
-        // This snap feels "sticky", maybe user wants free scroll?
-        // Let's implement basic momentum decay instead of hard snap for now, 
-        // or a soft snap to nearest. Soft snap is better for "one card in middle".
-
+        // Force target to exactly that card center
         this.targetTranslate = this.centeringOffset - (nearestIndex * this.cardWidth);
     }
 
@@ -202,16 +233,13 @@ class InfiniteCarousel {
     checkInfinite() {
         // We have 2 clones at start.
         // Total items = 2 + totalOriginals + 2.
-        // Real items start index = 2 (0-based).
-
-        // Logic: Keep "virtual index" within [2, 2 + totalOriginals - 1]
-        // But simpler: just teleport if we drift too far.
 
         const totalW = this.totalOriginals * this.cardWidth;
 
-        // Calculate "effective position" relative to the "start point" of real items
-        // Real start point in px space = centeringOffset - (2 * cardWidth)
+        // Real start point in px space (Where Index 0 sits)
         const realStartPx = this.centeringOffset - (2 * this.cardWidth);
+
+        // Diff of current pos relative to that start
         const diff = this.currentTranslate - realStartPx;
 
         // If diff > cardWidth * 0.5 (moved right past first item), jump to end
@@ -225,6 +253,9 @@ class InfiniteCarousel {
             this.currentTranslate += totalW;
             this.targetTranslate += totalW;
         }
+
+        // Note: The thresholds might need slight tuning if clones are visible
+        // but for standard infinite loop this "teleport" strategy works well.
     }
 
     setSliderPosition() {

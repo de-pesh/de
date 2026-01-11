@@ -422,8 +422,8 @@ nav {
     /* Masking for the fade effect */
     overflow: hidden;
     width: 100%;
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
     /* Allow arrows to sit on top (sibling z-index context) */
     position: relative;
     z-index: 1;
@@ -491,7 +491,7 @@ nav {
 }
 
 .project-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-1px);
     border-color: var(--border-active);
     box-shadow: var(--shadow-lg);
 }
@@ -592,12 +592,13 @@ nav {
     }
 
     .carousel-viewport {
-        padding-inline: 5vw;
-        /* Centers the 90vw card (100-90)/2 */
+        padding-inline: 0;
+        /* Removed CSS centering padding - JS handles it */
     }
 
     .project-card {
-        flex: 0 0 90vw;
+        flex: 0 0 85vw;
+        /* 85vw for standard carousel size */
     }
 
     .carousel-btn {
