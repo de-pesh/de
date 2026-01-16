@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
   <url>
-    <loc>https://deepesh-bhandari.com.np/</loc>
+    <loc>https://www.deepesh-bhandari.com.np/</loc>
+    <lastmod>2024-05-20</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://deepesh-bhandari.com.np/#about</loc>
+    <loc>https://www.deepesh-bhandari.com.np/about.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepesh-bhandari.com.np/#services</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://deepesh-bhandari.com.np/#portfolio</loc>
+    <loc>https://www.deepesh-bhandari.com.np/faq.html</loc>
     <priority>0.7</priority>
   </url>
+
+  <!-- Same-Page Anchor Links (For Entity Association) -->
   <url>
-    <loc>https://deepesh-bhandari.com.np/#contact</loc>
+    <loc>https://www.deepesh-bhandari.com.np/#about</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.deepesh-bhandari.com.np/#work</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.deepesh-bhandari.com.np/#contact</loc>
     <priority>0.6</priority>
   </url>
 </urlset>
