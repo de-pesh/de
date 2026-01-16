@@ -1,0 +1,18 @@
+# Standard SEO: Allow Google and Bing to index everything
+User-agent: *
+Allow: /
+
+# ChatGPT Real-time Search: Specifically allow the bot that powers ChatGPT Search
+User-agent: OAI-SearchBot
+Allow: /
+
+# GPT Training: Allow OpenAI to use your site content for model training (optional)
+User-agent: GPTBot
+Allow: /
+
+# Perplexity & Other AI: Allow the Common Crawl used by most LLMs
+User-agent: CCBot
+Allow: /
+
+# Sitemaps: Help bots find your pages faster
+Sitemap: https://www.deepesh-bhandari.com.np/sitemap.xml
