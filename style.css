@@ -243,7 +243,7 @@ nav {
     align-items: center;
     height: 40px;
     padding: 0 20px;
-    border-radius: 6px;
+    border-radius: 999px;
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
@@ -673,4 +673,100 @@ nav {
 
 .bump-right {
     animation: bump-right 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* --- Contact Page Styles --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 64px;
+    margin-top: 40px;
+}
+
+.contact-form-wrapper {
+    background: var(--bg-surface);
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--inner-glow);
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-color: var(--border-active);
+    background: rgba(255, 255, 255, 0.05);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.social-links-wrapper {
+    padding-top: 24px;
+}
+
+.social-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.social-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+    box-shadow: var(--inner-glow);
+}
+
+.social-card:hover {
+    background: var(--bg-surface-hover);
+    border-color: var(--border-active);
+    color: var(--text-primary);
+    transform: translateX(4px);
+    box-shadow: var(--shadow-md);
+}
+
+.social-card i {
+    color: var(--text-tertiary);
+    transition: color 0.2s ease;
+}
+
+.social-card:hover i {
+    color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
 }

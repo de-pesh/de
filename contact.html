@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Get in touch with Deepesh Bhandari for AI Automation projects, collaborations, or inquiries. Connect via Email, LinkedIn, GitHub, and more." />
+    <title>Contact | Deepesh Bhandari</title>
+
+    <link rel="icon" href="/images/deepesh bhandari logo.png" sizes="any">
+    <link rel="icon" href="/images/deepesh logo dark.png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="/images/deepesh logo light.png" media="(prefers-color-scheme: light)">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <nav>
+        <div class="container nav-content">
+            <div class="logo">DEEPESH</div>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#work">Work</a></li>
+                <li><a href="/contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-section" style="padding-bottom: 80px;">
+            <div class="container">
+                <h1 class="hero-title reveal">Get in Touch</h1>
+                <p class="hero-subtitle reveal" style="transition-delay: 0.1s;">
+                    Have a project in mind or just want to say hi? I'd love to hear from you.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper reveal" style="transition-delay: 0.2s;">
+                        <h2 style="margin-bottom: 24px;">Send a Message</h2>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Your Name"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact" class="form-label">Contact Number / Email</label>
+                                <input type="text" id="contact" name="contact" class="form-input"
+                                    placeholder="How can I reach you back?" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" name="message" class="form-textarea" rows="5"
+                                    placeholder="Tell me about your project..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                                Send Message <i data-lucide="send" style="width: 16px; margin-left: 8px;"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="social-links-wrapper reveal" style="transition-delay: 0.3s;">
+                        <h2 style="margin-bottom: 24px;">Connect</h2>
+                        <div class="social-grid">
+                            <a href="mailto:deepesh1379@gmail.com" class="social-card">
+                                <i data-lucide="mail"></i>
+                                <span>Email</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/de-pesh" target="_blank" class="social-card">
+                                <i data-lucide="linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/de-pesh" target="_blank" class="social-card">
+                                <i data-lucide="github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://wa.me/971522850781" target="_blank" class="social-card">
+                                <i data-lucide="message-circle"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                            <a href="https://www.youtube.com/@de-pesh" target="_blank" class="social-card">
+                                <i data-lucide="youtube"></i>
+                                <span>YouTube</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-cta">
+            <div style="margin-top: 32px; border-top: 1px solid var(--border-subtle); padding-top: 32px;">
+                <p>V:5 Copyright © Deepesh Bhandari 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
