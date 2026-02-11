@@ -49,7 +49,13 @@
                     <!-- Contact Form -->
                     <div class="contact-form-wrapper reveal" style="transition-delay: 0.2s;">
                         <h2 style="margin-bottom: 24px;">Send a Message</h2>
-                        <form class="contact-form">
+                        <form class="contact-form" action="https://formsubmit.co/deepesh1379@gmail.com" method="POST">
+                            <!-- FormSubmit Configuration -->
+                            <input type="hidden" name="_subject" value="New Portfolio Contact">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="https://deepesh-bhandari.com.np/contact.html">
+                            <input type="hidden" name="_template" value="table">
+
                             <div class="form-group">
                                 <label for="name" class="form-label">Name</label>
                                 <input type="text" id="name" name="name" class="form-input" placeholder="Your Name"
