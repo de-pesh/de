@@ -513,24 +513,96 @@ nav {
     box-shadow: var(--shadow-lg);
 }
 
+/* Project Art - CSS Compositions */
 .project-image {
     height: 340px;
-    background: #111;
+    background: #050505;
     position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-shadow: var(--inner-glow);
 }
 
-/* Gradient placeholders for images */
-.grad-1 {
-    background: radial-gradient(circle at top right, #333, #000);
+.project-art-icon {
+    width: 120px;
+    height: 120px;
+    color: rgba(255, 255, 255, 0.03);
+    z-index: 1;
+    transition: all 0.5s var(--ease-out-expo);
 }
 
-.grad-2 {
-    background: radial-gradient(circle at bottom left, #222, #000);
+.project-card:hover .project-art-icon {
+    transform: scale(1.1) rotate(-5deg);
+    color: rgba(255, 255, 255, 0.1);
 }
 
-.grad-3 {
-    background: radial-gradient(circle at center, #2a2a2a, #000);
+/* Art 1: Swarm (Blue/Cyan) */
+.project-art-1 {
+    background: radial-gradient(circle at center, rgba(94, 106, 210, 0.15) 0%, rgba(5, 5, 5, 1) 70%);
+}
+
+.project-art-1::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(45deg,
+            rgba(94, 106, 210, 0.03) 0px,
+            rgba(94, 106, 210, 0.03) 1px,
+            transparent 1px,
+            transparent 20px);
+    opacity: 0.5;
+}
+
+/* Art 2: Doc Analyzer (Purple/Pink) */
+.project-art-2 {
+    background: radial-gradient(circle at center, rgba(168, 85, 247, 0.15) 0%, rgba(5, 5, 5, 1) 70%);
+}
+
+.project-art-2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.3;
+}
+
+/* Art 3: Voice (Amber/Orange) */
+.project-art-3 {
+    background: radial-gradient(circle at center, rgba(245, 158, 11, 0.1) 0%, rgba(5, 5, 5, 1) 70%);
+}
+
+.project-art-3::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgba(245, 158, 11, 0.1);
+    border-radius: 50%;
+    animation: ripple 4s linear infinite;
+}
+
+@keyframes ripple {
+    0% {
+        width: 200px;
+        height: 200px;
+        opacity: 0.5;
+    }
+
+    100% {
+        width: 400px;
+        height: 400px;
+        opacity: 0;
+    }
 }
 
 .project-info {
