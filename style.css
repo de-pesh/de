@@ -714,6 +714,16 @@ nav {
         /* 85vw for standard carousel size */
     }
 
+    /* Contact Page Mobile */
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 32px;
+    }
+
+    .contact-form-wrapper {
+        padding: 24px;
+    }
+
     .carousel-btn {
         display: flex;
         /* Restored arrows */
@@ -721,6 +731,7 @@ nav {
         height: 40px;
     }
 }
+
 
 /* Missing Keyframes */
 @keyframes fade-in-up {
