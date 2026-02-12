@@ -443,6 +443,7 @@ nav {
     /* Reset centering, done via JS transform */
     padding-right: 0;
     cursor: grab;
+    touch-action: pan-y;
     will-change: transform;
 }
 

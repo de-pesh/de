@@ -173,13 +173,11 @@ class InfiniteCarousel {
         }
     }
 
-    touchStart(index) {
-        return (event) => {
-            this.isDragging = true;
-            this.startX = getPositionX(event);
-            this.animationID = requestAnimationFrame(this.animation.bind(this));
-            this.viewport.style.cursor = 'grabbing';
-        }
+    touchStart(event) {
+        this.isDragging = true;
+        this.startX = getPositionX(event);
+        this.animationID = requestAnimationFrame(this.animation.bind(this));
+        this.viewport.style.cursor = 'grabbing';
     }
 
     touchMove(event) {
