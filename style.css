@@ -125,6 +125,12 @@ nav {
     letter-spacing: -0.01em;
 }
 
+.logo a {
+    display: flex;
+    /* Fixes Safari inline-block issues */
+    align-items: center;
+}
+
 .logo img {
     height: 32px;
     /* Adjust based on preference */
@@ -583,6 +589,8 @@ nav {
     .logo img {
         height: 24px;
         /* Smaller logo for mobile */
+        width: auto;
+        /* Ensure aspect ratio is maintained */
     }
 
     .hero-title {
