@@ -580,6 +580,11 @@ nav {
         padding: 0 16px;
     }
 
+    .logo img {
+        height: 24px;
+        /* Smaller logo for mobile */
+    }
+
     .hero-title {
         font-size: 42px;
     }
