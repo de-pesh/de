@@ -283,23 +283,48 @@ if (marquee) {
     marquee.addEventListener('mouseleave', () => marquee.style.animationPlayState = 'running');
 }
 
-// Check for Success Parameter (Contact Form)
-const urlParams = new URLSearchParams(window.location.search);
-if (urlParams.get('success') === 'true') {
-    const form = document.getElementById('contact-form');
-    const successMessage = document.getElementById('success-message');
 
-    if (form && successMessage) {
-        form.style.display = 'none';
-        successMessage.style.display = 'block';
-        // Scroll to message
-        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-}
+// Contact Form Handling (AJAX)
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
 
-// Dynamic Redirect URL for FormSubmit
-// This ensures it works on both Localhost and Production
-const nextInput = document.querySelector('input[name="_next"]');
-if (nextInput) {
-    nextInput.value = window.location.origin + window.location.pathname + '?success=true';
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerHTML;
+
+        // Loading State
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Sending...';
+
+        const formData = new FormData(contactForm);
+
+        fetch("https://formsubmit.co/ajax/deepesh1379@gmail.com", {
+            method: "POST",
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success === "true" || data.success === true) {
+                    // Success UI
+                    contactForm.style.display = 'none';
+                    const successMessage = document.getElementById('success-message');
+                    if (successMessage) {
+                        successMessage.style.display = 'block';
+                        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                } else {
+                    // Error from FormSubmit
+                    alert("Something went wrong. Please try again or email me directly.");
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert("Network error. Please check your connection.");
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            });
+    });
 }

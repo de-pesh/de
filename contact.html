@@ -61,10 +61,11 @@
                         </div>
 
                         <form id="contact-form" class="contact-form"
-                            action="https://formsubmit.co/deepesh1379@gmail.com" method="POST">
+                            action="https://formsubmit.co/ajax/deepesh1379@gmail.com" method="POST">
                             <!-- FormSubmit Configuration -->
                             <input type="hidden" name="_subject" value="New Portfolio Contact">
-                            <input type="hidden" name="_captcha" value="false">
+                            <!-- reCAPTCHA enabled by default (removed _captcha=false) -->
+                            <input type="text" name="_honey" style="display:none">
                             <input type="hidden" name="_next" value="/contact.html?success=true">
                             <input type="hidden" name="_template" value="table">
 
