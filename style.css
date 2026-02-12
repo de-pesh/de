@@ -246,6 +246,7 @@ nav {
     max-width: 500px;
     margin: 0 auto 40px;
     color: var(--text-secondary);
+    text-align: center;
 }
 
 .hero-cta-group {
@@ -373,6 +374,7 @@ nav {
 .bento-text {
     font-size: 14px;
     color: var(--text-secondary);
+    text-align: justify;
 }
 
 .bento-stat {
@@ -959,6 +961,7 @@ nav {
     font-size: 15px;
     line-height: 1.6;
     color: var(--text-secondary);
+    text-align: justify;
 }
 
 /* Skills Grid */
@@ -1222,6 +1225,7 @@ nav {
     line-height: 1.6;
     color: var(--text-secondary);
     margin-bottom: 20px;
+    text-align: justify;
 }
 
 .work-stats {
@@ -1303,6 +1307,7 @@ nav {
     font-size: 14px;
     line-height: 1.6;
     color: var(--text-secondary);
+    text-align: justify;
 }
 
 @media (max-width: 768px) {
