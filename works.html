@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO & AEO Meta Tags -->
+    <meta name="description"
+        content="Explore Deepesh Bhandari's portfolio of AI automation projects including customer support swarms, RAG pipelines, and voice AI agents." />
+    <meta name="keywords"
+        content="AI Projects, Automation Portfolio, RAG Pipeline, AI Agents, Customer Support AI, Legal Document Analysis, Voice AI, Deepesh Bhandari Works" />
+    <meta name="author" content="Deepesh Bhandari" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Works | Deepesh Bhandari - AI Automation Projects" />
+    <meta property="og:description"
+        content="Discover real-world AI automation projects: agent swarms handling 5,000+ tickets daily, RAG pipelines processing 10k page contracts, and voice AI systems." />
+    <meta property="og:image" content="https://deepesh-bhandari.com.np/images/mee.png" />
+    <meta property="og:url" content="https://deepesh-bhandari.com.np/works.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Works | Deepesh Bhandari - AI Automation Projects" />
+    <meta name="twitter:description"
+        content="Discover real-world AI automation projects: agent swarms handling 5,000+ tickets daily, RAG pipelines processing 10k page contracts, and voice AI systems." />
+    <meta name="twitter:image" content="https://deepesh-bhandari.com.np/images/mee.png" />
+
+    <link rel="canonical" href="https://deepesh-bhandari.com.np/works.html" />
+
+    <title>Works | Deepesh Bhandari</title>
+
+    <!-- Dynamic Favicon -->
+    <link id="favicon" rel="icon" href="images/dt-logo-light.png?v=4" type="image/png">
+    <link rel="apple-touch-icon" href="images/dt-logo-dark.png?v=4">
+
+    <script>
+        function updateFavicon() {
+            const favicon = document.getElementById('favicon');
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            favicon.href = isDark ? 'images/dt-logo-dark.png?v=4' : 'images/dt-logo-light.png?v=4';
+        }
+        updateFavicon();
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Structured Data (JSON-LD) for AEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "AI Automation Projects by Deepesh Bhandari",
+      "description": "Portfolio of AI automation projects including autonomous agent swarms, RAG pipelines, and voice AI systems.",
+      "url": "https://www.deepesh-bhandari.com.np/works.html",
+      "author": {
+        "@type": "Person",
+        "name": "Deepesh Bhandari",
+        "url": "https://www.deepesh-bhandari.com.np/"
+      },
+      "hasPart": [
+        {
+          "@type": "CreativeWork",
+          "name": "Customer Support Swarm",
+          "description": "A fleet of AI agents handling 5,000+ support tickets daily with human-in-the-loop escalation.",
+          "keywords": ["Python", "LangGraph", "Redis", "AI Agents"]
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Legal Doc Analyzer",
+          "description": "RAG pipeline processing 10k page contracts to extract risk liabilities automatically.",
+          "keywords": ["LlamaIndex", "Qdrant", "RAG", "Document Processing"]
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Voice Sales Agent",
+          "description": "Real-time bidirectional voice agent for qualifying real estate leads.",
+          "keywords": ["Vapi.ai", "Twilio", "Voice AI"]
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <nav>
+        <div class="container nav-content">
+            <div class="logo"><a href="/"><img src="images/dt-logo-dark.png" alt="Deepesh Bhandari Logo"></a></div>
+            <ul class="nav-links">
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/works.html" class="active">Work</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Works Hero -->
+        <section class="hero-section" style="padding-bottom: 80px;">
+            <div class="container">
+                <div class="hero-label reveal">Portfolio</div>
+                <h1 class="hero-title reveal" style="transition-delay: 0.1s;">Selected <br>Works</h1>
+                <p class="hero-subtitle reveal" style="transition-delay: 0.2s;">
+                    Real-world AI systems that deliver measurable business impact.
+                </p>
+            </div>
+        </section>
+
+        <!-- Featured Projects Grid -->
+        <section class="section">
+            <div class="container">
+                <h2 class="reveal" style="margin-bottom: 40px;">Featured Projects</h2>
+
+                <div class="works-grid">
+                    <!-- Project 1 -->
+                    <div class="work-card reveal">
+                        <div class="work-image project-art-1">
+                            <i data-lucide="bot" class="project-art-icon"></i>
+                        </div>
+                        <div class="work-content">
+                            <div class="work-header">
+                                <h3>Customer Support Swarm</h3>
+                                <i data-lucide="arrow-up-right" style="width: 18px; height: 18px;"></i>
+                            </div>
+                            <p class="work-description">
+                                A fleet of specialized AI agents handling 5,000+ support tickets daily across email,
+                                chat, and social media. The system uses LangGraph for orchestration and Redis for state
+                                management, achieving 94% resolution rate without human intervention.
+                            </p>
+                            <div class="work-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">5,000+</div>
+                                    <div class="stat-label">Daily Tickets</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">94%</div>
+                                    <div class="stat-label">Auto-Resolution</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">2.3s</div>
+                                    <div class="stat-label">Avg Response</div>
+                                </div>
+                            </div>
+                            <div class="work-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">LangGraph</span>
+                                <span class="tag">Redis</span>
+                                <span class="tag">OpenAI</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="work-card reveal" style="transition-delay: 0.1s;">
+                        <div class="work-image project-art-2">
+                            <i data-lucide="file-text" class="project-art-icon"></i>
+                        </div>
+                        <div class="work-content">
+                            <div class="work-header">
+                                <h3>Legal Doc Analyzer</h3>
+                                <i data-lucide="arrow-up-right" style="width: 18px; height: 18px;"></i>
+                            </div>
+                            <p class="work-description">
+                                Advanced RAG pipeline that processes 10,000+ page legal contracts to automatically
+                                extract risk liabilities, compliance issues, and key clauses. Built with LlamaIndex and
+                                Qdrant vector database for semantic search across massive document sets.
+                            </p>
+                            <div class="work-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">10k+</div>
+                                    <div class="stat-label">Pages/Contract</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">87%</div>
+                                    <div class="stat-label">Accuracy</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">15min</div>
+                                    <div class="stat-label">Processing Time</div>
+                                </div>
+                            </div>
+                            <div class="work-tags">
+                                <span class="tag">LlamaIndex</span>
+                                <span class="tag">Qdrant</span>
+                                <span class="tag">RAG</span>
+                                <span class="tag">NLP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="work-card reveal" style="transition-delay: 0.2s;">
+                        <div class="work-image project-art-3">
+                            <i data-lucide="mic" class="project-art-icon"></i>
+                        </div>
+                        <div class="work-content">
+                            <div class="work-header">
+                                <h3>Voice Sales Agent</h3>
+                                <i data-lucide="arrow-up-right" style="width: 18px; height: 18px;"></i>
+                            </div>
+                            <p class="work-description">
+                                Real-time bidirectional voice AI agent for qualifying real estate leads. Handles natural
+                                conversations, asks qualifying questions, schedules appointments, and integrates with
+                                CRM systems. Built on Vapi.ai with Twilio for telephony infrastructure.
+                            </p>
+                            <div class="work-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">300+</div>
+                                    <div class="stat-label">Calls/Day</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">68%</div>
+                                    <div class="stat-label">Qualification Rate</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">4.2min</div>
+                                    <div class="stat-label">Avg Call Duration</div>
+                                </div>
+                            </div>
+                            <div class="work-tags">
+                                <span class="tag">Vapi.ai</span>
+                                <span class="tag">Twilio</span>
+                                <span class="tag">Voice AI</span>
+                                <span class="tag">CRM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="work-card reveal" style="transition-delay: 0.3s;">
+                        <div class="work-image project-art-4">
+                            <i data-lucide="database" class="project-art-icon"></i>
+                        </div>
+                        <div class="work-content">
+                            <div class="work-header">
+                                <h3>Enterprise Knowledge Base</h3>
+                                <i data-lucide="arrow-up-right" style="width: 18px; height: 18px;"></i>
+                            </div>
+                            <p class="work-description">
+                                Intelligent knowledge management system that ingests company documentation, Slack
+                                conversations, and code repositories. Employees can ask questions in natural language
+                                and get accurate answers with source citations.
+                            </p>
+                            <div class="work-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">50k+</div>
+                                    <div class="stat-label">Documents</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">92%</div>
+                                    <div class="stat-label">Answer Accuracy</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">1.8s</div>
+                                    <div class="stat-label">Query Time</div>
+                                </div>
+                            </div>
+                            <div class="work-tags">
+                                <span class="tag">Pinecone</span>
+                                <span class="tag">FastAPI</span>
+                                <span class="tag">Embeddings</span>
+                                <span class="tag">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="work-card reveal" style="transition-delay: 0.4s;">
+                        <div class="work-image project-art-5">
+                            <i data-lucide="workflow" class="project-art-icon"></i>
+                        </div>
+                        <div class="work-content">
+                            <div class="work-header">
+                                <h3>Marketing Automation Pipeline</h3>
+                                <i data-lucide="arrow-up-right" style="width: 18px; height: 18px;"></i>
+                            </div>
+                            <p class="work-description">
+                                End-to-end marketing automation using n8n workflows. Generates personalized email
+                                campaigns, social media content, and blog posts based on user behavior and market
+                                trends. Integrates with HubSpot and Google Analytics.
+                            </p>
+                            <div class="work-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">10k+</div>
+                                    <div class="stat-label">Emails/Week</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">43%</div>
+                                    <div class="stat-label">Open Rate</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">8.2%</div>
+                                    <div class="stat-label">Conversion</div>
+                                </div>
+                            </div>
+                            <div class="work-tags">
+                                <span class="tag">n8n</span>
+                                <span class="tag">HubSpot</span>
+                                <span class="tag">GPT-4</span>
+                                <span class="tag">Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="work-card reveal" style="transition-delay: 0.5s;">
+                        <div class="work-image project-art-6">
+                            <i data-lucide="brain" class="project-art-icon"></i>
+                        </div>
+                        <div class="work-content">
+                            <div class="work-header">
+                                <h3>Predictive Maintenance System</h3>
+                                <i data-lucide="arrow-up-right" style="width: 18px; height: 18px;"></i>
+                            </div>
+                            <p class="work-description">
+                                ML-powered system that predicts equipment failures before they happen. Analyzes sensor
+                                data, maintenance logs, and environmental factors to schedule preventive maintenance,
+                                reducing downtime by 67%.
+                            </p>
+                            <div class="work-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">67%</div>
+                                    <div class="stat-label">Downtime Reduction</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">89%</div>
+                                    <div class="stat-label">Prediction Accuracy</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">$2M+</div>
+                                    <div class="stat-label">Cost Savings</div>
+                                </div>
+                            </div>
+                            <div class="work-tags">
+                                <span class="tag">Scikit-learn</span>
+                                <span class="tag">TimeSeries</span>
+                                <span class="tag">IoT</span>
+                                <span class="tag">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="reveal" style="margin-bottom: 40px;">How I Work</h2>
+                <div class="process-grid">
+                    <div class="process-step reveal">
+                        <div class="process-number">01</div>
+                        <h3>Discovery & Analysis</h3>
+                        <p>Deep dive into your business processes to identify automation opportunities and pain points.
+                        </p>
+                    </div>
+                    <div class="process-step reveal" style="transition-delay: 0.1s;">
+                        <div class="process-number">02</div>
+                        <h3>Architecture Design</h3>
+                        <p>Design scalable system architecture with clear data flows and integration points.</p>
+                    </div>
+                    <div class="process-step reveal" style="transition-delay: 0.2s;">
+                        <div class="process-number">03</div>
+                        <h3>Iterative Development</h3>
+                        <p>Build in sprints with continuous feedback loops and incremental deployments.</p>
+                    </div>
+                    <div class="process-step reveal" style="transition-delay: 0.3s;">
+                        <div class="process-number">04</div>
+                        <h3>Monitoring & Optimization</h3>
+                        <p>Continuous performance monitoring with AI-driven optimizations and improvements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container footer-cta">
+                <h2>Ready to scale?</h2>
+                <p style="margin: 16px 0 32px;">Let's discuss how AI can transform your business.</p>
+
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                    <a href="mailto:deepesh1379@gmail.com" class="btn btn-primary">
+                        <i data-lucide="mail" style="width: 18px; margin-right: 8px;"></i> Email Me
+                    </a>
+                    <a href="tel:+971522850781" class="btn btn-secondary">
+                        <i data-lucide="phone" style="width: 18px; margin-right: 8px;"></i> +971 52 285 0781
+                    </a>
+                </div>
+
+                <div style="margin-top: 64px; border-top: 1px solid var(--border-subtle); padding-top: 32px;">
+                    <p>V:5 Copyright © Deepesh Bhandari 2026</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
