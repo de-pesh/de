@@ -515,6 +515,8 @@ nav {
 
 /* Project Art - CSS Compositions */
 .project-image {
+    width: 100%;
+    /* Ensure fill width */
     height: 340px;
     background: #050505;
     position: relative;
@@ -526,11 +528,18 @@ nav {
 }
 
 .project-art-icon {
-    width: 120px;
-    height: 120px;
+    width: 120px !important;
+    /* Force size over inline svg attrs */
+    height: 120px !important;
     color: rgba(255, 255, 255, 0.03);
     z-index: 1;
     transition: all 0.5s var(--ease-out-expo);
+}
+
+/* Ensure SVG itself scales if lucide keeps the class on parent */
+.project-art-icon svg {
+    width: 100%;
+    height: 100%;
 }
 
 .project-card:hover .project-art-icon {
@@ -540,7 +549,7 @@ nav {
 
 /* Art 1: Swarm (Blue/Cyan) */
 .project-art-1 {
-    background: radial-gradient(circle at center, rgba(94, 106, 210, 0.15) 0%, rgba(5, 5, 5, 1) 70%);
+    background: radial-gradient(circle at center, rgba(94, 106, 210, 0.15) 0%, #050505 70%);
 }
 
 .project-art-1::before {
@@ -550,32 +559,36 @@ nav {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: repeating-linear-gradient(45deg,
+    background-image: repeating-linear-gradient(45deg,
             rgba(94, 106, 210, 0.03) 0px,
             rgba(94, 106, 210, 0.03) 1px,
             transparent 1px,
             transparent 20px);
     opacity: 0.5;
+    pointer-events: none;
 }
 
 /* Art 2: Doc Analyzer (Purple/Pink) */
 .project-art-2 {
-    background: radial-gradient(circle at center, rgba(168, 85, 247, 0.15) 0%, rgba(5, 5, 5, 1) 70%);
+    background: radial-gradient(circle at center, rgba(168, 85, 247, 0.15) 0%, #050505 70%);
 }
 
 .project-art-2::before {
     content: '';
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
     background-size: 20px 20px;
     opacity: 0.3;
+    pointer-events: none;
 }
 
 /* Art 3: Voice (Amber/Orange) */
 .project-art-3 {
-    background: radial-gradient(circle at center, rgba(245, 158, 11, 0.1) 0%, rgba(5, 5, 5, 1) 70%);
+    background: radial-gradient(circle at center, rgba(245, 158, 11, 0.1) 0%, #050505 70%);
 }
 
 .project-art-3::before {
@@ -589,6 +602,7 @@ nav {
     border: 1px solid rgba(245, 158, 11, 0.1);
     border-radius: 50%;
     animation: ripple 4s linear infinite;
+    pointer-events: none;
 }
 
 @keyframes ripple {
