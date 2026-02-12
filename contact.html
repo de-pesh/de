@@ -49,11 +49,23 @@
                     <!-- Contact Form -->
                     <div class="contact-form-wrapper reveal" style="transition-delay: 0.2s;">
                         <h2 style="margin-bottom: 24px;">Send a Message</h2>
-                        <form class="contact-form" action="https://formsubmit.co/deepesh1379@gmail.com" method="POST">
+                        <div id="success-message" style="display: none; text-align: center; padding: 40px 0;">
+                            <div
+                                style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; background: rgba(13, 255, 0, 0.1); border-radius: 50%; color: var(--available); margin-bottom: 24px;">
+                                <i data-lucide="check" style="width: 32px; height: 32px;"></i>
+                            </div>
+                            <h3 style="margin-bottom: 16px; color: var(--text-primary);">Message Sent!</h3>
+                            <p style="color: var(--text-secondary); margin-bottom: 32px;">Thank you for reaching out.
+                                I'll get back to you as soon as possible.</p>
+                            <a href="/" class="btn btn-secondary">Back to Home</a>
+                        </div>
+
+                        <form id="contact-form" class="contact-form"
+                            action="https://formsubmit.co/deepesh1379@gmail.com" method="POST">
                             <!-- FormSubmit Configuration -->
                             <input type="hidden" name="_subject" value="New Portfolio Contact">
                             <input type="hidden" name="_captcha" value="false">
-                            <input type="hidden" name="_next" value="https://deepesh-bhandari.com.np/contact.html">
+                            <input type="hidden" name="_next" value="/contact.html?success=true">
                             <input type="hidden" name="_template" value="table">
 
                             <div class="form-group">
@@ -64,12 +76,12 @@
                             <div class="form-group">
                                 <label for="contact" class="form-label">Contact Number / Email</label>
                                 <input type="text" id="contact" name="contact" class="form-input"
-                                    placeholder="How can I reach you back?" required>
+                                    placeholder="How can I reach you?" required>
                             </div>
                             <div class="form-group">
                                 <label for="message" class="form-label">Message</label>
                                 <textarea id="message" name="message" class="form-textarea" rows="5"
-                                    placeholder="Tell me about your project..." required></textarea>
+                                    placeholder="Your message..." required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
                                 Send Message <i data-lucide="send" style="width: 16px; margin-left: 8px;"></i>

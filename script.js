@@ -282,3 +282,24 @@ if (marquee) {
     marquee.addEventListener('mouseenter', () => marquee.style.animationPlayState = 'paused');
     marquee.addEventListener('mouseleave', () => marquee.style.animationPlayState = 'running');
 }
+
+// Check for Success Parameter (Contact Form)
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('success') === 'true') {
+    const form = document.getElementById('contact-form');
+    const successMessage = document.getElementById('success-message');
+
+    if (form && successMessage) {
+        form.style.display = 'none';
+        successMessage.style.display = 'block';
+        // Scroll to message
+        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+// Dynamic Redirect URL for FormSubmit
+// This ensures it works on both Localhost and Production
+const nextInput = document.querySelector('input[name="_next"]');
+if (nextInput) {
+    nextInput.value = window.location.origin + window.location.pathname + '?success=true';
+}
