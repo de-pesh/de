@@ -8,9 +8,23 @@
         content="Get in touch with Deepesh Bhandari for AI Automation projects, collaborations, or inquiries. Connect via Email, LinkedIn, GitHub, and more." />
     <title>Contact | Deepesh Bhandari</title>
 
-    <link rel="icon" href="/images/deepesh bhandari logo.png" sizes="any">
-    <link rel="icon" href="/images/deepesh logo dark.png" media="(prefers-color-scheme: dark)">
-    <link rel="icon" href="/images/deepesh logo light.png" media="(prefers-color-scheme: light)">
+    <!-- Dynamic Favicon -->
+    <link id="favicon" rel="icon" href="images/dt-logo-light.png?v=4" type="image/png">
+    <link rel="apple-touch-icon" href="images/dt-logo-dark.png?v=4">
+
+    <script>
+        function updateFavicon() {
+            const favicon = document.getElementById('favicon');
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            favicon.href = isDark ? 'images/dt-logo-dark.png?v=4' : 'images/dt-logo-light.png?v=4';
+        }
+
+        // Run on load
+        updateFavicon();
+
+        // Listen for changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +38,7 @@
 
     <nav>
         <div class="container nav-content">
-            <div class="logo"><a href="/"><img src="images/deepesh logo dark.png" alt="Deepesh Bhandari Logo"></a></div>
+            <div class="logo"><a href="/"><img src="images/dt-logo-dark.png" alt="Deepesh Bhandari Logo"></a></div>
             <ul class="nav-links">
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="index.html#work">Work</a></li>
