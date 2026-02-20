@@ -154,6 +154,11 @@ nav {
     color: var(--text-primary);
 }
 
+.nav-links a.active {
+    color: #fff;
+    font-weight: 600;
+}
+
 /* --- Hero Section --- */
 .hero-section {
     padding-top: 200px;
