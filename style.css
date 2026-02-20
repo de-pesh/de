@@ -1118,6 +1118,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: var(--inner-glow);
 }
 
 /* Make icons glow on work card hover */
