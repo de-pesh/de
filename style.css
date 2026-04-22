@@ -886,12 +886,14 @@ nav {
     box-shadow: var(--shadow-md);
 }
 
-.social-card i {
+.social-card i,
+.social-card svg {
     color: var(--text-tertiary);
     transition: color 0.2s ease;
 }
 
-.social-card:hover i {
+.social-card:hover i,
+.social-card:hover svg {
     color: var(--text-primary);
 }
 
@@ -1235,7 +1237,8 @@ nav {
 }
 
 .work-stats {
-    display: grid;
+    /* display: grid; */
+    display: none;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
     margin-bottom: 20px;
