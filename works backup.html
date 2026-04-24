@@ -59,8 +59,8 @@
     {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      "name": "AI & Automation Projects by Deepesh Bhandari",
-      "description": "Portfolio of automation projects including e-commerce price monitors, bulk price updaters, WhatsApp bots, and PDF QA systems.",
+      "name": "AI Automation Projects by Deepesh Bhandari",
+      "description": "Portfolio of AI automation projects including autonomous agent swarms, RAG pipelines, and voice AI systems.",
       "url": "https://www.deepesh-bhandari.com.np/works.html",
       "author": {
         "@type": "Person",
@@ -70,27 +70,21 @@
       "hasPart": [
         {
           "@type": "CreativeWork",
-          "name": "Price Drop Notifier — Carrefour",
-          "description": "E-commerce price monitoring system that scrapes Carrefour listings and sends instant alerts when prices drop.",
-          "keywords": ["Python", "Scraping", "Carrefour", "Automation"]
+          "name": "Customer Support Swarm",
+          "description": "A fleet of AI agents handling 5,000+ support tickets daily with human-in-the-loop escalation.",
+          "keywords": ["Python", "LangGraph", "Redis", "AI Agents"]
         },
         {
           "@type": "CreativeWork",
-          "name": "Bulk Price Updater — Shopify & WooCommerce",
-          "description": "Tool to update thousands of product prices across Shopify and WooCommerce stores simultaneously via their APIs.",
-          "keywords": ["Shopify", "WooCommerce", "API", "Python"]
+          "name": "Legal Doc Analyzer",
+          "description": "RAG pipeline processing 10k page contracts to extract risk liabilities automatically.",
+          "keywords": ["LlamaIndex", "Qdrant", "RAG", "Document Processing"]
         },
         {
           "@type": "CreativeWork",
-          "name": "WhatsApp Bot for Price Enquiries",
-          "description": "Conversational WhatsApp bot that answers product price queries in real-time using automation.",
-          "keywords": ["WhatsApp", "Bot", "Automation", "Twilio"]
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "PDF QA Bot",
-          "description": "RAG-powered bot that answers natural language questions directly from uploaded PDF documents.",
-          "keywords": ["RAG", "LangChain", "PDF", "OpenAI"]
+          "name": "Voice Sales Agent",
+          "description": "Real-time bidirectional voice agent for qualifying real estate leads.",
+          "keywords": ["Vapi.ai", "Twilio", "Voice AI"]
         }
       ]
     }
@@ -128,152 +122,230 @@
                 <h2 class="reveal" style="margin-bottom: 40px;">Featured Projects</h2>
 
                 <div class="works-grid">
-                    <!-- Project 1: Price Drop Notifier -->
+                    <!-- Project 1 -->
                     <div class="work-card reveal">
                         <div class="work-image project-art-1">
-                            <i data-lucide="bell" class="project-art-icon"></i>
+                            <i data-lucide="bot" class="project-art-icon"></i>
                         </div>
                         <div class="work-content">
                             <div class="work-header">
-                                <h3>Price Drop Notifier</h3>
+                                <h3>Customer Support Swarm</h3>
                                 <i data-lucide="arrow-up-right" style="width: 18px; height: 18px;"></i>
                             </div>
                             <p class="work-description">
-                                E-commerce price monitoring system that scrapes Carrefour product listings
-                                and fires instant alerts the moment competitor prices drop. Tracks SKUs in
-                                regular basis.
-                            </p>
-                            <div class="work-stats">
-                                <div class="stat-item">
-                                    <div class="stat-value">10k+</div>
-                                    <div class="stat-label">SKUs Tracked</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-value">&lt;1min</div>
-                                    <div class="stat-label">Alert Latency</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-value">24/7</div>
-                                    <div class="stat-label">Monitoring</div>
-                                </div>
-                            </div>
-                            <div class="work-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">Scraping</span>
-                                <span class="tag">Carrefour</span>
-                                <span class="tag">Automation</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 2: Bulk Price Updater -->
-                    <div class="work-card reveal" style="transition-delay: 0.1s;">
-                        <div class="work-image project-art-2">
-                            <i data-lucide="tag" class="project-art-icon"></i>
-                        </div>
-                        <div class="work-content">
-                            <div class="work-header">
-                                <h3>Bulk Price Updater</h3>
-                                <i data-lucide="arrow-up-right" style="width: 18px; height: 18px;"></i>
-                            </div>
-                            <p class="work-description">
-                                Bulk pricing tool that updates product prices across Shopify and
-                                WooCommerce stores simultaneously via their REST APIs. Rule-based pricing, and
-                                scheduled updates - eliminating hours of manual work.
+                                A fleet of specialized AI agents handling support tickets daily across email,
+                                chat, and social media. The system uses LangGraph for orchestration and Redis for state
+                                management, achieving 94% resolution rate without human intervention.
                             </p>
                             <div class="work-stats">
                                 <div class="stat-item">
                                     <div class="stat-value">5,000+</div>
-                                    <div class="stat-label">Products/Run</div>
+                                    <div class="stat-label">Daily Tickets</div>
                                 </div>
                                 <div class="stat-item">
-                                    <div class="stat-value">2</div>
-                                    <div class="stat-label">Platforms</div>
+                                    <div class="stat-value">94%</div>
+                                    <div class="stat-label">Auto-Resolution</div>
                                 </div>
                                 <div class="stat-item">
-                                    <div class="stat-value">98%</div>
-                                    <div class="stat-label">Success Rate</div>
+                                    <div class="stat-value">2.3s</div>
+                                    <div class="stat-label">Avg Response</div>
                                 </div>
                             </div>
                             <div class="work-tags">
-                                <span class="tag">Shopify API</span>
-                                <span class="tag">WooCommerce</span>
                                 <span class="tag">Python</span>
-                                <span class="tag">REST API</span>
+                                <span class="tag">LangGraph</span>
+                                <span class="tag">Redis</span>
+                                <span class="tag">OpenAI</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project 3: WhatsApp Bot -->
+                    <!-- Project 2 -->
+                    <div class="work-card reveal" style="transition-delay: 0.1s;">
+                        <div class="work-image project-art-2">
+                            <i data-lucide="file-text" class="project-art-icon"></i>
+                        </div>
+                        <div class="work-content">
+                            <div class="work-header">
+                                <h3>Legal Doc Analyzer</h3>
+                                <i data-lucide="arrow-up-right" style="width: 18px; height: 18px;"></i>
+                            </div>
+                            <p class="work-description">
+                                Advanced RAG pipeline that processes 10,000+ page legal contracts to automatically
+                                extract risk liabilities, compliance issues, and key clauses. Built with LlamaIndex and
+                                Qdrant vector database for semantic search across massive document sets.
+                            </p>
+                            <div class="work-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">10k+</div>
+                                    <div class="stat-label">Pages/Contract</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">87%</div>
+                                    <div class="stat-label">Accuracy</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">15min</div>
+                                    <div class="stat-label">Processing Time</div>
+                                </div>
+                            </div>
+                            <div class="work-tags">
+                                <span class="tag">LlamaIndex</span>
+                                <span class="tag">Qdrant</span>
+                                <span class="tag">RAG</span>
+                                <span class="tag">NLP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
                     <div class="work-card reveal" style="transition-delay: 0.2s;">
                         <div class="work-image project-art-3">
-                            <i data-lucide="message-circle" class="project-art-icon"></i>
+                            <i data-lucide="mic" class="project-art-icon"></i>
                         </div>
                         <div class="work-content">
                             <div class="work-header">
-                                <h3>WhatsApp Price Enquiry Bot</h3>
+                                <h3>Voice Sales Agent</h3>
                                 <i data-lucide="arrow-up-right" style="width: 18px; height: 18px;"></i>
                             </div>
                             <p class="work-description">
-                                Conversational WhatsApp bot that answers product price queries in real-time.
-                                Simply send a product name receive the current price, and
-                                availability.
+                                Real-time bidirectional voice AI agent for qualifying real estate leads. Handles natural
+                                conversations, asks qualifying questions, schedules appointments, and integrates with
+                                CRM systems. Built on Vapi.ai with Twilio for telephony infrastructure.
                             </p>
                             <div class="work-stats">
                                 <div class="stat-item">
-                                    <div class="stat-value">500+</div>
-                                    <div class="stat-label">Queries/Day</div>
+                                    <div class="stat-value">300+</div>
+                                    <div class="stat-label">Calls/Day</div>
                                 </div>
                                 <div class="stat-item">
-                                    <div class="stat-value">&lt;3s</div>
-                                    <div class="stat-label">Response Time</div>
+                                    <div class="stat-value">68%</div>
+                                    <div class="stat-label">Qualification Rate</div>
                                 </div>
                                 <div class="stat-item">
-                                    <div class="stat-value">91%</div>
-                                    <div class="stat-label">Satisfaction</div>
+                                    <div class="stat-value">4.2min</div>
+                                    <div class="stat-label">Avg Call Duration</div>
                                 </div>
                             </div>
                             <div class="work-tags">
-                                <span class="tag">WhatsApp API</span>
-                                <span class="tag">RAG</span>
-                                <span class="tag">Python</span>
-                                <span class="tag">Automation</span>
+                                <span class="tag">Vapi.ai</span>
+                                <span class="tag">Twilio</span>
+                                <span class="tag">Voice AI</span>
+                                <span class="tag">CRM</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project 4: PDF QA Bot -->
+                    <!-- Project 4 -->
                     <div class="work-card reveal" style="transition-delay: 0.3s;">
                         <div class="work-image project-art-4">
-                            <i data-lucide="file-search" class="project-art-icon"></i>
+                            <i data-lucide="database" class="project-art-icon"></i>
                         </div>
                         <div class="work-content">
                             <div class="work-header">
-                                <h3>PDF QA Bot</h3>
+                                <h3>Enterprise Knowledge Base</h3>
                                 <i data-lucide="arrow-up-right" style="width: 18px; height: 18px;"></i>
                             </div>
                             <p class="work-description">
-                                RAG-powered bot that lets users ask natural language questions directly against any
-                                uploaded PDF. Retrieves precise answers with citations.
+                                Intelligent knowledge management system that ingests company documentation, Slack
+                                conversations, and code repositories. Employees can ask questions in natural language
+                                and get accurate answers with source citations.
                             </p>
                             <div class="work-stats">
                                 <div class="stat-item">
-                                    <div class="stat-value">500pg+</div>
-                                    <div class="stat-label">PDFs Supported</div>
+                                    <div class="stat-value">50k+</div>
+                                    <div class="stat-label">Documents</div>
                                 </div>
                                 <div class="stat-item">
-                                    <div class="stat-value">89%</div>
+                                    <div class="stat-value">92%</div>
                                     <div class="stat-label">Answer Accuracy</div>
                                 </div>
                                 <div class="stat-item">
-                                    <div class="stat-value">2s</div>
+                                    <div class="stat-value">1.8s</div>
                                     <div class="stat-label">Query Time</div>
                                 </div>
                             </div>
                             <div class="work-tags">
-                                <span class="tag">LangChain</span>
-                                <span class="tag">RAG</span>
-                                <span class="tag">LLM</span>
+                                <span class="tag">Pinecone</span>
+                                <span class="tag">FastAPI</span>
+                                <span class="tag">Embeddings</span>
+                                <span class="tag">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="work-card reveal" style="transition-delay: 0.4s;">
+                        <div class="work-image project-art-5">
+                            <i data-lucide="workflow" class="project-art-icon"></i>
+                        </div>
+                        <div class="work-content">
+                            <div class="work-header">
+                                <h3>Marketing Automation Pipeline</h3>
+                                <i data-lucide="arrow-up-right" style="width: 18px; height: 18px;"></i>
+                            </div>
+                            <p class="work-description">
+                                End-to-end marketing automation using n8n workflows. Generates personalized email
+                                campaigns, social media content, and blog posts based on user behavior and market
+                                trends. Integrates with HubSpot and Google Analytics.
+                            </p>
+                            <div class="work-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">10k+</div>
+                                    <div class="stat-label">Emails/Week</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">43%</div>
+                                    <div class="stat-label">Open Rate</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">8.2%</div>
+                                    <div class="stat-label">Conversion</div>
+                                </div>
+                            </div>
+                            <div class="work-tags">
+                                <span class="tag">n8n</span>
+                                <span class="tag">HubSpot</span>
+                                <span class="tag">GPT-4</span>
+                                <span class="tag">Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="work-card reveal" style="transition-delay: 0.5s;">
+                        <div class="work-image project-art-6">
+                            <i data-lucide="brain" class="project-art-icon"></i>
+                        </div>
+                        <div class="work-content">
+                            <div class="work-header">
+                                <h3>Predictive Maintenance System</h3>
+                                <i data-lucide="arrow-up-right" style="width: 18px; height: 18px;"></i>
+                            </div>
+                            <p class="work-description">
+                                ML-powered system that predicts equipment failures before they happen. Analyzes sensor
+                                data, maintenance logs, and environmental factors to schedule preventive maintenance,
+                                reducing downtime by 67%.
+                            </p>
+                            <div class="work-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">67%</div>
+                                    <div class="stat-label">Downtime Reduction</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">89%</div>
+                                    <div class="stat-label">Prediction Accuracy</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">$2M+</div>
+                                    <div class="stat-label">Cost Savings</div>
+                                </div>
+                            </div>
+                            <div class="work-tags">
+                                <span class="tag">Scikit-learn</span>
+                                <span class="tag">TimeSeries</span>
+                                <span class="tag">IoT</span>
+                                <span class="tag">Docker</span>
                             </div>
                         </div>
                     </div>
